@@ -6,7 +6,7 @@
 #   movies = Movie.create([{ name: 'Star Wars' }, { name: 'Lord of the Rings' }])
 #   Character.create(name: 'Luke', movie: movies.first)
 
-kate = User.create!{ username: "Kayaking Kate",
+kate = User.create!( username: "Kayaking Kate",
                        name: "Kate Smith",
                        password: "password"
                        street_address: "123 Mulberry Street",
@@ -16,8 +16,8 @@ kate = User.create!{ username: "Kayaking Kate",
                        phone_number: "(123) 456-7891",
                        age: "25",
                        about_me: "I love travelling and going on adventures with my favorite side-kick -- my dog, Jack."
-                      }
-alex = User.create!{ username: "Adventurous Alex",
+                     )
+alex = User.create!( username: "Adventurous Alex",
                        name: "Alex Rodriguez",
                        password: "password",
                        street_address: "540 Turner Street",
@@ -27,8 +27,8 @@ alex = User.create!{ username: "Adventurous Alex",
                        phone_number: "(784) 658-8754",
                        age: "54",
                        about_me: "I love to travel with my wife and kids to new places."
-                      }
-hillary = User.create!{ username: "Hiking Hillary",
+                     )
+hillary = User.create!( username: "Hiking Hillary",
                        name: "Hillary Jones",
                        password: "password",
                        street_address: "415 Wewatta Street",
@@ -38,4 +38,4 @@ hillary = User.create!{ username: "Hiking Hillary",
                        phone_number: "(303) 201-8795",
                        age: "32",
                        about_me: "Being outdoors is my favorite place to be."
-                      }
+                     )
