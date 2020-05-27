@@ -8,7 +8,8 @@
 
 kate = User.create!( username: "Kayaking Kate",
                        name: "Kate Smith",
-                       password: "password"
+                       email: "kate@example.com",
+                       password: "password",
                        street_address: "123 Mulberry Street",
                        state: "CO",
                        zip: "80303",
@@ -19,6 +20,7 @@ kate = User.create!( username: "Kayaking Kate",
                      )
 alex = User.create!( username: "Adventurous Alex",
                        name: "Alex Rodriguez",
+                       email: "alex@example.com",
                        password: "password",
                        street_address: "540 Turner Street",
                        state: "MT",
@@ -30,6 +32,7 @@ alex = User.create!( username: "Adventurous Alex",
                      )
 hillary = User.create!( username: "Hiking Hillary",
                        name: "Hillary Jones",
+                       email: "hillary@example.com",
                        password: "password",
                        street_address: "415 Wewatta Street",
                        state: "CO",

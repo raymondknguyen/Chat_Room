@@ -3,6 +3,7 @@ class User < ApplicationRecord
   has_many :gear_items, through: :rentals
 
   validates :name, presence: true
+  validates :email, uniqueness: true, presence: true
   validates :password_digest, presence: true
   validates :street_address, presence: true
   validates :state, presence: true
