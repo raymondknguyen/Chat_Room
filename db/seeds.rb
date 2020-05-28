@@ -6,10 +6,10 @@
 #   movies = Movie.create([{ name: 'Star Wars' }, { name: 'Lord of the Rings' }])
 #   Character.create(name: 'Luke', movie: movies.first)
 
+Rental.destroy_all
 User.destroy_all
 GearItem.destroy_all
 Owner.destroy_all
-
 
 kate = User.create!( username: "Kayaking Kate",
                        name: "Kate Smith",
@@ -63,3 +63,8 @@ ski = GearItem.create(name: 'Skis', description: 'skis to ski', price: 100.5, co
 bench = GearItem.create(name: 'Bench', description: 'you sit on this', price: 95.0, condition: 0, status: 0, location: 'aurora', owner: ashley)
 
 backpack = GearItem.create(name: 'Backpack', description: 'can carry your stuff', price: 35.0, condition: 0, status: 0, location: 'aurora', owner: lucii)
+
+rental_1 = Rental.create!(start_date: 2020-05-01, end_date: 2020-05-15, user_id: hillary.id, gear_item_id: tent.id)
+rental_2 = Rental.create!(start_date: 2020-06-05, end_date: 2020-06-10, user_id: alex.id, gear_item_id: camper.id)
+rental_3 = Rental.create!(start_date: 2020-07-10, end_date: 2020-07-15, user_id: kate.id, gear_item_id: backpack.id)
+rental_4 = Rental.create!(start_date: 2020-07-10, end_date: 2020-07-15, user_id: kate.id, gear_item_id: bike.id)
