@@ -5,3 +5,67 @@
 #
 #   movies = Movie.create([{ name: 'Star Wars' }, { name: 'Lord of the Rings' }])
 #   Character.create(name: 'Luke', movie: movies.first)
+
+User.destroy_all
+GearItem.destroy_all
+Owner.destroy_all
+Rental.destroy_all
+puts "Cleared DB!"
+
+kate = User.create!( username: "Kayaking Kate",
+                       name: "Kate Smith",
+                       email: "kate@example.com",
+                       password: "password",
+                       street_address: "123 Mulberry Street",
+                       state: "CO",
+                       zip: "80303",
+                       profile_picture: "https://encrypted-tbn0.gstatic.com/images?q=tbn%3AANd9GcQDNCFOXFv30vvRl4plrMuwCltmT5m4TzAtszYfm8XrLP7PLgKH&usqp=CAU",
+                       phone_number: "(123) 456-7891",
+                       age: "25",
+                       about_me: "I love travelling and going on adventures with my favorite side-kick -- my dog, Jack."
+                     )
+alex = User.create!( username: "Adventurous Alex",
+                       name: "Alex Rodriguez",
+                       email: "alex@example.com",
+                       password: "password",
+                       street_address: "540 Turner Street",
+                       state: "MT",
+                       zip: "57894",
+                       profile_picture: "https://nationalpostcom.files.wordpress.com/2018/05/gettyimages-862209732.jpg?quality=80&strip=all&w=780",
+                       phone_number: "(784) 658-8754",
+                       age: "54",
+                       about_me: "I love to travel with my wife and kids to new places."
+                     )
+hillary = User.create!( username: "Hiking Hillary",
+                       name: "Hillary Jones",
+                       email: "hillary@example.com",
+                       password: "password",
+                       street_address: "415 Wewatta Street",
+                       state: "CO",
+                       zip: "80501",
+                       profile_picture: "https://encrypted-tbn0.gstatic.com/images?q=tbn%3AANd9GcQfyaxSAV51PUwMLdxzLnqb49v0N30Di219dn1A1csH9_BTsFbk&usqp=CAU",
+                       phone_number: "(303) 201-8795",
+                       age: "32",
+                       about_me: "Being outdoors is my favorite place to be."
+                     )
+
+collin = Owner.create(name: 'Collin')
+ashley = Owner.create(name: 'Ashley')
+lucii = Owner.create(name: 'Lucii')
+
+snowboard = GearItem.create(name: 'Snowboard', description: 'a board to snow', price: 250.5, condition: 0, status: 0, location: 'denver', owner: collin)
+bike = GearItem.create(name: 'BMX', description: 'fastest bike in town', price: 2.5, condition: 0, status: 0, location: 'denver', owner: collin)
+helmet = GearItem.create(name: 'Helmet', description: 'this will protect your head', price: 45.0, condition: 0, status: 0, location: 'denver', owner: collin)
+tent = GearItem.create(name: 'Tent', description: 'this tent will protect you from thunder', price: 224.5, condition: 0, status: 0, location: 'denver', owner: collin)
+camper = GearItem.create(name: 'Big Camper', description: 'take it in the water and you have nothing', price: 200.5, condition: 0, status: 0, location: 'denver', owner: collin)
+
+skates = GearItem.create(name: 'Skates', description: 'skates that will roll circles around your neighbor', price: 85.5, condition: 0, status: 0, location: 'denver', owner: ashley)
+ski = GearItem.create(name: 'Skis', description: 'skis to ski', price: 100.5, condition: 0, status: 0, location: 'aurora', owner: ashley)
+bench = GearItem.create(name: 'Bench', description: 'you sit on this', price: 95.0, condition: 0, status: 0, location: 'aurora', owner: ashley)
+
+backpack = GearItem.create(name: 'Backpack', description: 'can carry your stuff', price: 35.0, condition: 0, status: 0, location: 'aurora', owner: lucii)
+
+rental_1 = Rental.create!(start_date: 2020-05-01, end_date: 2020-05-15, user_id: hillary.id, gear_item_id: tent.id)
+rental_2 = Rental.create!(start_date: 2020-06-05, end_date: 2020-06-10, user_id: alex.id, gear_item_id: camper.id)
+rental_3 = Rental.create!(start_date: 2020-07-10, end_date: 2020-07-15, user_id: kate.id, gear_item_id: backpack.id)
+rental_4 = Rental.create!(start_date: 2020-07-10, end_date: 2020-07-15, user_id: kate.id, gear_item_id: bike.id)
