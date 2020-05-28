@@ -6,6 +6,11 @@
 #   movies = Movie.create([{ name: 'Star Wars' }, { name: 'Lord of the Rings' }])
 #   Character.create(name: 'Luke', movie: movies.first)
 
+User.destroy_all
+GearItem.destroy_all
+Owner.destroy_all
+
+
 kate = User.create!( username: "Kayaking Kate",
                        name: "Kate Smith",
                        email: "kate@example.com",
@@ -42,3 +47,19 @@ hillary = User.create!( username: "Hiking Hillary",
                        age: "32",
                        about_me: "Being outdoors is my favorite place to be."
                      )
+
+collin = Owner.create(name: 'Collin')
+ashley = Owner.create(name: 'Ashley')
+lucii = Owner.create(name: 'Lucii')
+
+snowboard = GearItem.create(name: 'Snowboard', description: 'a board to snow', price: 250.5, condition: 0, status: 0, location: 'denver', owner: collin)
+bike = GearItem.create(name: 'BMX', description: 'fastest bike in town', price: 2.5, condition: 0, status: 0, location: 'denver', owner: collin)
+helmet = GearItem.create(name: 'Helmet', description: 'this will protect your head', price: 45.0, condition: 0, status: 0, location: 'denver', owner: collin)
+tent = GearItem.create(name: 'Tent', description: 'this tent will protect you from thunder', price: 224.5, condition: 0, status: 0, location: 'denver', owner: collin)
+camper = GearItem.create(name: 'Big Camper', description: 'take it in the water and you have nothing', price: 200.5, condition: 0, status: 0, location: 'denver', owner: collin)
+
+skates = GearItem.create(name: 'Skates', description: 'skates that will roll circles around your neighbor', price: 85.5, condition: 0, status: 0, location: 'denver', owner: ashley)
+ski = GearItem.create(name: 'Skis', description: 'skis to ski', price: 100.5, condition: 0, status: 0, location: 'aurora', owner: ashley)
+bench = GearItem.create(name: 'Bench', description: 'you sit on this', price: 95.0, condition: 0, status: 0, location: 'aurora', owner: ashley)
+
+backpack = GearItem.create(name: 'Backpack', description: 'can carry your stuff', price: 35.0, condition: 0, status: 0, location: 'aurora', owner: lucii)

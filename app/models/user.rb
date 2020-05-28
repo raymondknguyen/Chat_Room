@@ -11,4 +11,5 @@ class User < ApplicationRecord
   validates :phone_number, presence: true
   validates :age, presence: true
 
+  has_secure_password
 end
