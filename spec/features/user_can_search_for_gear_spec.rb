@@ -23,8 +23,8 @@ describe "as a visitor or user" do
 
       fill_in :location, with: "Denver, CO"
       fill_in :keywords, with: "helmet, snow"
-      fill_in :start_date, with: "2020-08-10"
-      fill_in :end_date, with: "2020-08-15"
+      fill_in :start_date, with: "08/10/2020"
+      fill_in :end_date, with: "08/15/2020"
 
       click_button "Search"
 

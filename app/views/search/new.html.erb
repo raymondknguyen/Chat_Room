@@ -1,0 +1,23 @@
+<h1 align= "center">Find the Gear for Your Next Adventure!</h1>
+
+<center>
+
+<h2>What are you looking for?</h2>
+
+<%= form_tag '/search', method: :post do |f| %>
+
+<%= label_tag :keywords %>
+<%= text_field_tag :keywords %><br>
+
+<%= label_tag :location %>
+<%= text_field_tag :location %><br>
+
+<%= label_tag :pick_up_date %>
+<%= date_field_tag :start_date %><br>
+
+<%= label_tag :return_date %>
+<%= date_field_tag :end_date %><br>
+
+<%= submit_tag 'Search' %>
+<% end %>
+</center>
