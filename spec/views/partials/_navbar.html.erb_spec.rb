@@ -4,8 +4,12 @@ describe "partials/_navbar" do
   let(:user) { User.first }
 
   context "as a visitor" do
+    before do
+      allow_any_instance_of(ApplicationController).to receive(:current_user).and_return(nil)
+    end
+
     it "I can see a navbar at the top of the page" do
-      visit "/"
+      render
 
       expect(rendered).to have_link "Find Gear", href: "/"
       expect(rendered).to have_link "Login", href: "/login"
@@ -15,11 +19,10 @@ describe "partials/_navbar" do
 
   context "as a logged in user" do
     before do
-      # mock current_user
-      allow(view).to receive(:current_user).and_return(user)
+      allow_any_instance_of(ApplicationController).to receive(:current_user).and_return(user)
     end
 
-    xit "I can see a navbar at the top of the page" do
+    it "I can see a navbar at the top of the page" do
       render
 
       expect(rendered).to have_link "Find Gear", href: "/"
