@@ -6,10 +6,11 @@
 #   movies = Movie.create([{ name: 'Star Wars' }, { name: 'Lord of the Rings' }])
 #   Character.create(name: 'Luke', movie: movies.first)
 
-Rental.destroy_all
 User.destroy_all
 GearItem.destroy_all
 Owner.destroy_all
+Rental.destroy_all
+puts "Cleared DB!"
 
 kate = User.create!( username: "Kayaking Kate",
                        name: "Kate Smith",
