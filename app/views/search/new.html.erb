@@ -2,15 +2,18 @@
 
 <center>
 
-<h2>What gear are you looking for?</h2>
+<h2>What do you want to rent?</h2>
 
-<%= form_tag '/search', method: :post do |f| %>
+<%= form_tag '/search', method: :get do |f| %>
 
-<%= label_tag :keywords %>
-<%= text_field_tag :keywords %><br>
+<%= label_tag "Type of Gear" %><br>
+<%= text_field_tag :keyword %><br>
 
-<%= label_tag :location %>
+<%= label_tag "Pickup location (city, state)" %><br>
 <%= text_field_tag :location %><br>
+
+<%= label_tag "How many miles can you travel to pick it up?" %></br>
+<%= number_field_tag :distance %><br>
 
 <%= label_tag :pick_up_date %>
 <%= date_field_tag :start_date %><br>

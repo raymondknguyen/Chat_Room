@@ -22,13 +22,14 @@ describe "as a visitor or user" do
       visit '/'
 
       fill_in :location, with: "Denver, CO"
-      fill_in :keywords, with: "helmet, snow"
+      fill_in :keyword, with: "helmet"
+      fill_in :distance, with: 15
       fill_in :start_date, with: "08/10/2020"
       fill_in :end_date, with: "08/15/2020"
 
       click_button "Search"
 
-      expect(current_path).to eq("/search_results")
+      expect(current_path).to eq("/search")
       expect(page).to have_content "Here are your search results:"
 
     end
