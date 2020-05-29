@@ -12,4 +12,8 @@ class GearItem < ApplicationRecord
   enum condition: %w(fair, good, perfect)
   enum status: %w(available pending rented)
 
+  def self.find_matches(query_params)
+    GearItem.where("lower(name) LIKE?", "%#{query_params[:keyword]}%")
+  end
+
 end
