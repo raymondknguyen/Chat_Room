@@ -19,10 +19,10 @@ describe 'As a logged in User' do
    @bike = GearItem.create(name: 'BMX', description: 'fastest bike in town', price: 2.5, condition: 0, status: 0, location: 'denver', owner: ashley)
    @helmet = GearItem.create(name: 'Helmet', description: 'this will protect your head', price: 45.0, condition: 0, status: 0, location: 'denver', owner: ashley)
    @tent = GearItem.create(name: 'Tent', description: 'this tent will protect you from thunder', price: 224.5, condition: 0, status: 0, location: 'denver', owner: ashley)
-   @rental_1 = Rental.create!(start_date: 2020-05-01, end_date: 2020-05-15, user_id: @kate.id, gear_item_id: @snowboard.id)
-   @rental_2 = Rental.create!(start_date: 2020-05-25, end_date: 2020-06-10, user_id: @kate.id, gear_item_id: @bike.id)
-   @rental_3 = Rental.create!(start_date: 2020-05-25, end_date: 2020-06-10, user_id: @kate.id, gear_item_id: @helmet.id)
-   @rental_3 = Rental.create!(start_date: 2020-07-12, end_date: 2020-07-15, user_id: @kate.id, gear_item_id: @tent.id)
+   @rental_1 = Rental.create!(start_date: "2020-05-01", end_date: "2020-05-15", user_id: @kate.id, gear_item_id: @snowboard.id)
+   @rental_2 = Rental.create!(start_date: "2020-05-25", end_date: "2020-06-10", user_id: @kate.id, gear_item_id: @bike.id)
+   @rental_3 = Rental.create!(start_date: "2020-05-25", end_date: "2020-06-10", user_id: @kate.id, gear_item_id: @helmet.id)
+   @rental_3 = Rental.create!(start_date: "2020-07-12", end_date: "2020-07-15", user_id: @kate.id, gear_item_id: @tent.id)
 
 
    allow_any_instance_of(ApplicationController).to receive(:current_user).and_return(@kate)
@@ -41,24 +41,22 @@ describe 'As a logged in User' do
     # test picture
   end
 
-  it "can click link to edit profile" do
-    visit '/profile'
-    expect(page).to have_link("Edit Profile")
-  end
 
   it "can see rental information" do
     visit '/profile'
-    within(".requested_rentals") do
-      expect(page).to have_content()
-    end
+    save_and_open_page
+    # within(".requested_rentals") do
+    #   expect(page).to have_content()
+    # end
     within(".current_rentals") do
-      expect(page).to have_content()
+      expect(page).to have_content(@helmet.name)
+      expect(page).to have_content(@bike.name)
     end
     within(".upcoming_rentals") do
-      expect(page).to have_content()
+      expect(page).to have_content(@tent.name)
     end
     within(".past_rentals") do
-      expect(page).to have_content()
+      expect(page).to have_content(@snowboard.name)
     end
   end
 
