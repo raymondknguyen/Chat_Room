@@ -13,4 +13,21 @@ class User < ApplicationRecord
   validates :age, numericality: true, presence: true
 
   has_secure_password
+
+  def current_rentals
+    rentals.where("end_date >= ? AND start_date <= ?", Date.today, Date.today)
+  end
+
+  def past_rentals
+    rentals.where("end_date < ?", Date.today)
+  end
+
+  def upcoming_rentals
+    rentals.where("start_date > ?", Date.today)
+  end
+
+  def requested_rentals
+    gear_items.where(status: "pending")
+  end
+
 end
