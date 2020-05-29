@@ -5,7 +5,6 @@ class SearchController<ApplicationController
 
   def index
     @gear_items = GearItem.find_matches(query_params)
-    require "pry"; binding.pry
     #I think this is where we'll want to make the call to our microservice, using @gear_items and location_params
   end
 
