@@ -1,25 +1,8 @@
 require 'rails_helper'
 
-RSpec.describe GearItem, type: :model do
-
-  describe 'validations' do
-    it {should validate_presence_of(:name)}
-    it {should validate_presence_of(:description)}
-    it {should define_enum_for(:status) }
-    it {should define_enum_for(:condition) }
-    it {should validate_presence_of(:location)}
-    it {should validate_numericality_of(:price)}
-
-  end
-
-  describe 'relationships' do
-    it {should belong_to(:owner)}
-    it {should have_many(:rentals)}
-    it {should have_many(:users).through(:rentals)}
-  end
-
-  describe 'class methods' do
-    it '.find_matches' do
+describe "as a visitor or user" do
+  describe "when I visit the search page" do
+    before(:each) do
       collin = Owner.create(name: 'Collin')
       ashley = Owner.create(name: 'Ashley')
 
@@ -32,10 +15,44 @@ RSpec.describe GearItem, type: :model do
       skates = GearItem.create(name: 'Snow Shoes', description: 'trek through the snow', price: 85.5, condition: 0, status: 0, location: 'Denver, CO', owner: ashley)
       cool_helmet = GearItem.create(name: 'Cool Helmet', description: 'helmet to protect you', price: 100.5, condition: 0, status: 0, location: 'Fort Collins, CO', owner: ashley)
       bench = GearItem.create(name: 'Bench', description: 'you sit on this', price: 95.0, condition: 0, status: 0, location: 'Denver, CO', owner: ashley)
+    end
 
-      query_params = {keyword: "helmet"}
+    it "I can enter a location, distance, keyword, and dates to search for matching gear to rent" do
 
-      expect(GearItem.find_matches(query_params)).to eq([helmet, purple_helmet, cool_helmet])
+      visit '/'
+
+      fill_in :location, with: "Denver, CO"
+      fill_in :keyword, with: "helmet"
+      fill_in :distance, with: 15
+      fill_in :start_date, with: "08/10/2020"
+      fill_in :end_date, with: "08/15/2020"
+
+      click_button "Search"
+
+      expect(current_path).to eq("/search")
+      expect(page).to have_content "Here are your search results:"
+    end
+
+    it "After I search I am directed to a results page that shows a map of items matching my keyword located within my preferred search location radius" do
+
+    visit '/'
+
+    fill_in :location, with: "Denver, CO"
+    fill_in :keyword, with: "helmet"
+    fill_in :distance, with: 15
+    fill_in :start_date, with: "08/10/2020"
+    fill_in :end_date, with: "08/15/2020"
+
+    click_button "Search"
+
+    expect(page).to have_css(".result", count: 3)
+
+    within(first(".result")) do
+      expect(page).to have_css(".name")
+      expect(page).to have_css(".price")
+      expect(page).to have_css(".location")  
+    end
+
     end
   end
 end
