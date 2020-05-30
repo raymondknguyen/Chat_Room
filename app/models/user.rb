@@ -27,7 +27,7 @@ class User < ApplicationRecord
   end
 
   def requested_rentals
-    gear_items.where(status: "pending")
+    rentals.where(status: "pending")
   end
 
 end

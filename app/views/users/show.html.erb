@@ -6,8 +6,30 @@
 
 <%=link_to "Messages", "/user/messages" %>
 
+<section class = "requested_rentals">
+  <% if current_user.requested_rentals != [] %>
+  <h3>Requested Rentals</h3>
+  <table>
+    <tr>
+      <th>Name</th>
+      <th>Starting</th>
+      <th>Ending</th>
+    </tr>
+    <% current_user.requested_rentals.each do |rental| %>
+    <tr>
+      <td><p><%= rental.gear_item.name %> </p></td>
+      <td><p><%= rental.start_date %> </p></td>
+      <td><p><%= rental.end_date %> </p></td>
+    </tr>
+    <% end %>
+  </table>
+  <%end%>
+</section>
+
 
 <section class = "current_rentals">
+  <% if current_user.current_rentals != [] %>
+
   <h3>Current Rentals</h3>
   <table>
     <tr>
@@ -23,9 +45,11 @@
     </tr>
     <% end %>
   </table>
+  <%end %>
 </section>
 
 <section class = "upcoming_rentals">
+  <% if current_user.upcoming_rentals != [] %>
   <h3>Upcoming Rentals</h3>
   <table>
     <tr>
@@ -41,9 +65,11 @@
     </tr>
     <% end %>
   </table>
+  <% end %>
 </section>
 
 <section class = "past_rentals">
+  <% if current_user.past_rentals != [] %>
   <h3>Past Rentals</h3>
   <table>
     <tr>
@@ -59,4 +85,5 @@
     </tr>
     <% end %>
   </table>
+  <% end %>
 </section>
