@@ -45,7 +45,6 @@ describe 'As a logged in User' do
 
   it "can see rental information" do
     visit '/profile'
-    save_and_open_page
     within(".requested_rentals") do
       expect(page).to have_content(@kayak.name)
     end
