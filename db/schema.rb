@@ -42,6 +42,7 @@ ActiveRecord::Schema.define(version: 2020_05_30_043724) do
     t.bigint "gear_item_id"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+    t.string "status", default: "pending"
     t.index ["gear_item_id"], name: "index_rentals_on_gear_item_id"
     t.index ["user_id"], name: "index_rentals_on_user_id"
   end
