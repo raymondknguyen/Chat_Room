@@ -5,7 +5,6 @@ describe 'As a logged in User' do
     @kate = User.create!( username: "Kayaking Kate",
                            name: "Kate Smith",
                            email: "kate@example.com",
-                           password: "password",
                            street_address: "123 Mulberry Street",
                            state: "CO",
                            zip: "80303",
@@ -39,7 +38,7 @@ describe 'As a logged in User' do
     within(".about_me") do
       expect(page).to have_content(@kate.about_me)
     end
-    expect(page).to have_content(@kate.username)
+    expect(page).to have_content(@kate.name)
     # test picture
   end
 
