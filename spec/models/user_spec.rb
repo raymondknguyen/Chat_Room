@@ -38,6 +38,7 @@ RSpec.describe User, type: :model do
    @jack = User.create!( username: "Adventure Jack",
                         name: "Jack Black",
                         email: "jack@example.com",
+
                         street_address: "123 Mulberry Street",
                         state: "CO",
                         zip: "80303",
