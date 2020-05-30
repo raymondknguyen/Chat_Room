@@ -10,7 +10,7 @@ describe "as a visitor or user" do
       bike = GearItem.create(name: 'BMX', description: 'fastest bike in town', price: 2.5, condition: 0, status: 0, location: 'Broomfield, CO', owner: collin)
       helmet = GearItem.create(name: 'Helmet', description: 'this will protect your head', price: 45.0, condition: 0, status: 0, location: 'Denver, CO', owner: collin)
       tent = GearItem.create(name: 'Tent', description: 'this tent will protect you from thunder', price: 224.5, condition: 0, status: 0, location: 'Denver, CO', owner: collin)
-      camper = GearItem.create(name: 'Purple Helmet', description: 'snazzier head protection', price: 200.5, condition: 0, status: 0, location: 'Denver, CO', owner: collin)
+      purple_helmet = GearItem.create(name: 'Purple Helmet', description: 'snazzier head protection', price: 200.5, condition: 0, status: 0, location: 'Denver, CO', owner: collin)
 
       skates = GearItem.create(name: 'Snow Shoes', description: 'trek through the snow', price: 85.5, condition: 0, status: 0, location: 'Denver, CO', owner: ashley)
       cool_helmet = GearItem.create(name: 'Cool Helmet', description: 'helmet to protect you', price: 100.5, condition: 0, status: 0, location: 'Fort Collins, CO', owner: ashley)
@@ -44,6 +44,14 @@ describe "as a visitor or user" do
     fill_in :end_date, with: "08/15/2020"
 
     click_button "Search"
+
+    expect(page).to have_css(".result", count: 3)
+
+    within(first(".result")) do
+      expect(page).to have_css(".name")
+      expect(page).to have_css(".price")
+      expect(page).to have_css(".location")  
+    end
 
     end
   end
