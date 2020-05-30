@@ -15,19 +15,19 @@ class User < ApplicationRecord
   has_secure_password
 
   def current_rentals
-    rentals.where("end_date >= ? AND start_date <= ?", Date.today, Date.today)
+    rentals.where("end_date >= ? AND start_date <= ? AND status = ?", Date.today, Date.today, "approved")
   end
 
   def past_rentals
-    rentals.where("end_date < ?", Date.today)
+    rentals.where("end_date < ? AND status = ?", Date.today, "approved")
   end
 
   def upcoming_rentals
-    rentals.where("start_date > ?", Date.today)
+    rentals.where("start_date > ? AND status = ?", Date.today, "approved")
   end
 
   def requested_rentals
-    gear_items.where(status: "pending")
+    rentals.where(status: "pending")
   end
 
 end
