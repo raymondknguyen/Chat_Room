@@ -1,0 +1,15 @@
+<h1>Gear</h1>
+
+<div id='item'>
+  <img src= <%= @item.photo %>>
+  <h3><%= @item.name %></h3>
+  <p><%= @item.description %></p>
+  <h3>Price: <%= @item.price  %></h3>
+  <h3><%= @item.status %></h3>
+</div>
+
+<%# <% if current_user %> %>
+  <%= link_to 'Rent Gear', "/gear_items/#{@item.id}/rent" %>
+<%# <% else %> %>
+  <%# <h3>Please log in to rent.</h3> %>
+<%# <% end %> %>

@@ -9,7 +9,7 @@ class GearItem < ApplicationRecord
   has_many :rentals
   has_many :users, through: :rentals
 
-  enum condition: %w(fair, good, perfect)
+  enum condition: %w(fair good perfect)
   enum status: %w(available pending rented)
 
   def self.find_matches(query_params)
