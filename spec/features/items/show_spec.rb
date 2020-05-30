@@ -13,6 +13,7 @@ RSpec.describe 'as a user' do
       expect(page).to have_content(item1.description)
       expect(page).to have_content(item1.price)
       expect(page).to have_content(item1.status)
+      expect(page).to have_css("img[src*='#{item1.image}']")
       expect(page).to_not have_content(item2.name)
     end
 
@@ -21,7 +22,7 @@ RSpec.describe 'as a user' do
       item1 = create(:random_item, owner: owner)
 
       visit "/gear_items/#{item1.id}"
-      
+      save_and_open_page
       expect(page).to have_content(item1.name)
 
       expect(page).to have_link('Rent Gear')
