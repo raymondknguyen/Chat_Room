@@ -1,0 +1,15 @@
+<h1 align= "center">Update Profile Information</h1>
+<center>
+  <%= form_tag '/profile', method: :patch do |f| %>
+
+  <%= label_tag "Profile Picture" %><br>
+  <%= text_field_tag :profile_picture %><br>
+
+  <%= label_tag "About Me" %><br>
+  <%= text_field_tag :about_me %><br>
+
+  <%= label_tag "Age" %></br>
+  <%= number_field_tag :age %><br>
+
+  <%= submit_tag 'Save' %>
+  <% end %>
