@@ -4,6 +4,7 @@ Rails.application.routes.draw do
   get "/search", to: "search#index"
 
   get '/profile', to: 'users#show'
+  delete '/logout', to: 'sessions#destroy'
 
   namespace :user do
     get '/messages', to: "messages#index"
