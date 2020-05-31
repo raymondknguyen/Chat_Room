@@ -15,7 +15,6 @@ puts "Cleared DB!"
 kate = User.create!( username: "Kayaking Kate",
                        name: "Kate Smith",
                        email: "kate@example.com",
-                       password: "password",
                        street_address: "123 Mulberry Street",
                        state: "CO",
                        zip: "80303",
@@ -27,7 +26,6 @@ kate = User.create!( username: "Kayaking Kate",
 alex = User.create!( username: "Adventurous Alex",
                        name: "Alex Rodriguez",
                        email: "alex@example.com",
-                       password: "password",
                        street_address: "540 Turner Street",
                        state: "MT",
                        zip: "57894",
@@ -39,7 +37,6 @@ alex = User.create!( username: "Adventurous Alex",
 hillary = User.create!( username: "Hiking Hillary",
                        name: "Hillary Jones",
                        email: "hillary@example.com",
-                       password: "password",
                        street_address: "415 Wewatta Street",
                        state: "CO",
                        zip: "80501",
@@ -64,8 +61,3 @@ ski = GearItem.create(name: 'Skis', description: 'skis to ski', price: 100.5, co
 bench = GearItem.create(name: 'Bench', description: 'you sit on this', price: 95.0, condition: 0, status: 0, location: 'aurora', owner: ashley)
 
 backpack = GearItem.create(name: 'Backpack', description: 'can carry your stuff', price: 35.0, condition: 0, status: 0, location: 'aurora', owner: lucii)
-
-rental_1 = Rental.create!(start_date: 2020-05-01, end_date: 2020-05-15, user_id: hillary.id, gear_item_id: tent.id)
-rental_2 = Rental.create!(start_date: 2020-06-05, end_date: 2020-06-10, user_id: alex.id, gear_item_id: camper.id)
-rental_3 = Rental.create!(start_date: 2020-07-10, end_date: 2020-07-15, user_id: kate.id, gear_item_id: backpack.id)
-rental_4 = Rental.create!(start_date: 2020-07-10, end_date: 2020-07-15, user_id: kate.id, gear_item_id: bike.id)
