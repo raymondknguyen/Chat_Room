@@ -8,8 +8,8 @@
   <h3><%= @item.status %></h3>
 </div>
 
-<%# <% if current_user %> %>
+<% if current_user %>
   <%= link_to 'Rent Gear', "/gear_items/#{@item.id}/rent" %>
-<%# <% else %> %>
-  <%# <h3>Please log in to rent.</h3> %>
-<%# <% end %> %>
+<% else %>
+  <h3><%= link_to 'Login to Rent', '/auth/google_oauth2' %></h3>
+<% end %>

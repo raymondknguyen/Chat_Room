@@ -43,13 +43,11 @@ group :development, :test do
   gem 'rspec-rails'
   gem 'shoulda-matchers'
   gem 'pry'
-  gem 'rspec-rails'
   gem "capybara"
   gem 'factory_bot_rails'
   gem 'launchy'
   gem 'faker'
   gem 'figaro'
-
 end
 
 group :development do
