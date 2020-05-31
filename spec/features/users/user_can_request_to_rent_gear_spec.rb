@@ -56,5 +56,25 @@ describe "as a user" do
        expect(page).to have_content(@snowboard.name)
      end
    end
+
+   it "Request is not successful if date fields are not complete" do
+     visit "/gear_items/#{@snowboard.id}"
+
+     click_link "Rent Gear"
+
+     expect(current_path).to eq("/rental/#{@snowboard.id}")
+
+     fill_in :name, with: "#{@kate.name}"
+     fill_in :email_address, with: "#{@kate.email}"
+     fill_in :end_date, with: "2020/11/15"
+     fill_in :message, with: "I would love to borrow your snowboard for my trip to Aspen"
+
+     click_button "Submit"
+
+     expect(current_path).to eq("/rental/#{@snowboard.id}")
+
+     expect(page).to have_content("Something went wrong -- try your request again")
+
+   end
  end
 end
