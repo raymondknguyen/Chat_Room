@@ -54,9 +54,10 @@ describe "as a user" do
 
      within(".requested_rentals") do
        expect(page).to have_content(@snowboard.name)
+       click_link "#{@snowboard.name}"
      end
 
-     visit "/gear_items/#{@snowboard.id}"
+     expect(current_path).to eq("/gear_items/#{@snowboard.id}")
 
      expect(page).to have_content("pending")
    end
