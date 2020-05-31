@@ -55,6 +55,10 @@ describe "as a user" do
      within(".requested_rentals") do
        expect(page).to have_content(@snowboard.name)
      end
+
+     visit "/gear_items/#{@snowboard.id}"
+
+     expect(page).to have_content("pending")
    end
 
    it "Request is not successful if date fields are not complete" do

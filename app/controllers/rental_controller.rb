@@ -12,6 +12,8 @@ class RentalController<ApplicationController
                    gear_item_id: item.id)
     if rental.save
       flash[:success] = "You've successfully submitted a rental request!"
+
+      item.update(status: 1)
       redirect_to ("/profile")
     else
       flash[:error] = "Something went wrong -- try your request again"
