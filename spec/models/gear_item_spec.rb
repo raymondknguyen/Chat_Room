@@ -33,9 +33,7 @@ RSpec.describe GearItem, type: :model do
       cool_helmet = GearItem.create(name: 'Cool Helmet', description: 'helmet to protect you', price: 100.5, condition: 0, status: 0, location: 'Fort Collins, CO', owner: ashley)
       bench = GearItem.create(name: 'Bench', description: 'you sit on this', price: 95.0, condition: 0, status: 0, location: 'Denver, CO', owner: ashley)
 
-      query_params = {keyword: "helmet"}
-
-      expect(GearItem.find_matches(query_params)).to eq([helmet, purple_helmet, cool_helmet])
+      expect(GearItem.find_matches("helmet")).to eq([helmet, purple_helmet, cool_helmet])
     end
   end
 end
