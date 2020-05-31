@@ -22,7 +22,7 @@ class RentalController<ApplicationController
   private
 
   def rental_params
-    params.permit(:item_id, :start_date, :end_date)
+    params.permit(:item_id, :start_date, :end_date, :message)
   end
 
 end
