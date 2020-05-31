@@ -7,13 +7,16 @@
 
     <link href="https://unpkg.com/basscss@7.1.1/css/basscss.min.css" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,700,800" rel="stylesheet">
-    <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
+    <%= stylesheet_link_tag 'application', media: 'all', 'data-turbolinks-track': 'reload' %>
+    <%= javascript_include_tag "https://maps.googleapis.com/maps/api/js?key=#{ENV['MAP_GENERATOR_KEY']}" %>
     <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
+    <%= yield(:head_tags) %>
   </head>
 
-  <body>
-    <%= render 'partials/navbar' %>
 
+  <body>
+    <center>
+    <%= render 'partials/navbar' %>
     <%= yield %>
     </center>
   </body>
