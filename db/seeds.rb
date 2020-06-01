@@ -61,3 +61,6 @@ ski = GearItem.create(name: 'Skis', description: 'skis to ski', price: 100.5, co
 bench = GearItem.create(name: 'Bench', description: 'you sit on this', price: 95.0, condition: 0, status: 0, location: 'aurora', owner: ashley)
 
 helmet_2 = GearItem.create(name: 'Purple Helmet', description: 'do not break your head', price: 35.0, condition: 0, status: 0, location: 'aurora', owner: lucii)
+
+puts "Seeded DB!"
+puts "GearHub is Ready to Go!"
