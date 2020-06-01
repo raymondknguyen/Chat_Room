@@ -38,7 +38,7 @@ describe "as a visitor or user" do
     visit '/'
 
     fill_in :location, with: "Denver, CO"
-    fill_in :keyword, with: "helmet"
+    fill_in :keyword, with: "HeLmet"
     fill_in :distance, with: 15
     fill_in :start_date, with: "08/10/2020"
     fill_in :end_date, with: "08/15/2020"
@@ -50,7 +50,7 @@ describe "as a visitor or user" do
     within(first(".result")) do
       expect(page).to have_css(".name")
       expect(page).to have_css(".price")
-      expect(page).to have_css(".location")  
+      expect(page).to have_css(".location")
     end
 
     end

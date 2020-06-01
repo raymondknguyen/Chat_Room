@@ -8,7 +8,8 @@
 <% end %>
 </div>
 
-<%=link_to "Messages", "/user/messages" %>
+<%=link_to "Messages", "/user/messages" %> <br>
+<%=link_to "Edit my profile", "/profile/edit" %>
 
 <section class = "requested_rentals">
   <% if current_user.requested_rentals != [] %>
@@ -21,7 +22,7 @@
     </tr>
     <% current_user.requested_rentals.each do |rental| %>
     <tr>
-      <td><p><%= rental.gear_item.name %> </p></td>
+      <td><p><%=link_to "#{rental.gear_item.name}", "/gear_items/#{rental.gear_item.id}" %> </p></td>
       <td><p><%= rental.start_date %> </p></td>
       <td><p><%= rental.end_date %> </p></td>
     </tr>
