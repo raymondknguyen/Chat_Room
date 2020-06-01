@@ -60,4 +60,4 @@ skates = GearItem.create(name: 'Skates', description: 'skates that will roll cir
 ski = GearItem.create(name: 'Skis', description: 'skis to ski', price: 100.5, condition: 0, status: 0, location: 'aurora', owner: ashley)
 bench = GearItem.create(name: 'Bench', description: 'you sit on this', price: 95.0, condition: 0, status: 0, location: 'aurora', owner: ashley)
 
-backpack = GearItem.create(name: 'Backpack', description: 'can carry your stuff', price: 35.0, condition: 0, status: 0, location: 'aurora', owner: lucii)
+helmet_2 = GearItem.create(name: 'Purple Helmet', description: 'do not break your head', price: 35.0, condition: 0, status: 0, location: 'aurora', owner: lucii)

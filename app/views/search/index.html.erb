@@ -9,6 +9,7 @@
 
 <h1 align=center>Here are your search results:</h1>
 
+
 <% @gear_items.each do |gear_item| %>
   <div class="result">
     <p class="name"><%=link_to "#{gear_item.name}", "/gear_items/#{gear_item.id}" %></p>
