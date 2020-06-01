@@ -73,3 +73,4 @@ rental_2 = Rental.create!(start_date: "2020-06-05", end_date: "2020-06-10", user
 rental_3 = Rental.create!(start_date: "2020-05-30", end_date: "2020-06-12", user_id: margo.id, gear_item_id: backpack.id, status: 'approved')
 rental_4 = Rental.create!(start_date: "2020-07-10", end_date: "2020-07-15", user_id: margo.id, gear_item_id: bike.id)
 rental_5 = Rental.create!(start_date: "2020-07-10", end_date: "2020-07-15", user_id: margo.id, gear_item_id: helmet.id, status: 'approved')
+

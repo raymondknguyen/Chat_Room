@@ -1,0 +1,25 @@
+<center>
+
+<h2 align= "center">Request to Rent <%= @item.name %></h2>
+
+<%= form_tag "/rental/#{@item.id}", method: :post do |f| %>
+
+<%= label_tag :name %><br>
+<%= text_field_tag :name %><br>
+
+<%= label_tag :email_address %><br>
+<%= text_field_tag :email_address %><br>
+
+<%= label_tag "Start Date (YYYY/MM/DD)" %>
+<%= text_field_tag :start_date %><br>
+
+<%= label_tag "End Date (YYYY/MM/DD)" %>
+<%= text_field_tag :end_date %><br>
+
+<%= label_tag :message %><br>
+<%= text_field_tag :message %><br>
+
+<%= submit_tag 'Submit' %>
+<% end %>
+
+</center>
