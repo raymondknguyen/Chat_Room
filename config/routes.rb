@@ -4,6 +4,9 @@ Rails.application.routes.draw do
   get "/search", to: "search#index"
 
   get '/profile', to: 'users#show'
+  patch '/profile', to: 'users#update'
+  get '/profile/edit', to: 'users#edit'
+  delete '/logout', to: 'sessions#destroy'
 
   namespace :user do
     get '/messages', to: "messages#index"
@@ -16,6 +19,5 @@ Rails.application.routes.draw do
 
   get '/auth/google_oauth2', as: 'google_login'
   get '/auth/google_oauth2/callback', to: 'sessions#new'
-  # get '/auth/google_oauth2/callback', to: 'sessions#new'
   get '/auth/failure', to: redirect('/')
 end
