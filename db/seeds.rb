@@ -66,7 +66,7 @@ skates = GearItem.create(name: 'Skates', description: 'skates that will roll cir
 ski = GearItem.create(name: 'Skis', description: 'skis to ski', price: 100.5, condition: 0, status: 0, location: 'aurora', owner: ashley)
 bench = GearItem.create(name: 'Bench', description: 'you sit on this', price: 95.0, condition: 0, status: 0, location: 'aurora', owner: ashley)
 
-backpack = GearItem.create(name: 'Backpack', description: 'can carry your stuff', price: 35.0, condition: 0, status: 0, location: 'aurora', owner: lucii)
+helmet_2 = GearItem.create(name: 'Purple Helmet', description: 'do not break your head', price: 35.0, condition: 0, status: 0, location: 'aurora', owner: lucii)
 
 rental_1 = Rental.create!(start_date: "2020-05-01", end_date: "2020-05-15", user_id: margo.id, gear_item_id: tent.id, status: 'approved')
 rental_2 = Rental.create!(start_date: "2020-06-05", end_date: "2020-06-10", user_id: kate.id, gear_item_id: camper.id)
