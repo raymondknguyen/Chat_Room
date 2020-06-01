@@ -1,16 +1,16 @@
 <nav class="primary_nav">
-  <section class = "right links overflow-auto table mr4">
-    <div class="align-middle table-cell p3">
+  <section class = "right links table mr4">
+    <div>
       <%= link_to 'Find Gear', '/' %>
     </div>
 
     <% if current_user %>
-      <div class="align-middle table-cell p3">
+      <div>
         <%= link_to 'Log Out', '/logout' %>
         <%= link_to 'Profile', '/profile' %>
       </div>
     <% else %>
-      <div class="align-middle table-cell p3">
+      <div>
         <%= link_to 'Login', '/auth/google_oauth2' %>
       </div>
     <% end %>
