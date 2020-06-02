@@ -10,6 +10,7 @@
       </ul>
     </div>
   <% end %>
+  <%= form.hidden_field :room_id, value: room.id %>
   <div class="form-group">
     <%= form.text_area :content, class: 'form-control' %>
     <%= form.submit 'Send', class: "btn btn-primary btn-block" %>
