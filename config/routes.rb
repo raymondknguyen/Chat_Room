@@ -1,4 +1,7 @@
 Rails.application.routes.draw do
+  resources :messages
+  resources :rooms
+  get '/rooms', to: 'rooms#index'
   # For details on the DSL available within this file, see http://guides.rubyonrails.org/routing.html
   root "search#new"
   get "/search", to: "search#index"
