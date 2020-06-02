@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2020_06_02_043058) do
+ActiveRecord::Schema.define(version: 2020_06_02_043959) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -79,6 +79,7 @@ ActiveRecord::Schema.define(version: 2020_06_02_043058) do
     t.string "email"
     t.string "google_token"
     t.string "google_refresh_token"
+    t.string "city"
   end
 
   add_foreign_key "gear_items", "owners"

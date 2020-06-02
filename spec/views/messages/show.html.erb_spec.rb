@@ -2,10 +2,12 @@ require 'rails_helper'
 
 RSpec.describe "messages/show", type: :view do
   before(:each) do
+    user = create(:regular_user)
+    room = create(:room)
     @message = assign(:message, Message.create!(
       content: "MyText",
-      user: nil,
-      room: nil
+      user: user,
+      room: room
     ))
   end
 
