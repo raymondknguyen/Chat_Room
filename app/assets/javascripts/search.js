@@ -7,15 +7,21 @@ function initMap(lat, lng, results) {
 
     var map = new google.maps.Map(document.getElementById('map'), mapOptions);
 
-    var index = 0;
     var array = results;
-    array.forEach(myFunction);
-    function myFunction(item, index)
-      {
-        new google.maps.Marker({
-    position: {lat: item.lat, lng: item.lng},
-    map: map,
-    title: item.name
-});
-}
+
+    var marker, i;
+
+    for (i = 0; i < array.length; i++) {
+      marker = new google.maps.Marker({
+        position: new google.maps.LatLng(array[i].lat, array[i].lng),
+        map: map,
+        name: array[i].name
+      });
+
+      google.maps.event.addListener(marker, 'click', (function(marker, i) {
+        return function() {
+          window.open(`${array[i].url}`, '_blank');
+        }
+      })(marker, i));
+    }
 }

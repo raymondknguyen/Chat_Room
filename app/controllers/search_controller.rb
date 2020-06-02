@@ -10,7 +10,7 @@ class SearchController<ApplicationController
     parsed_response = [{"id"=>"1137",
       "type"=>"gear_item",
       "attributes"=>
-       {"id"=>"1137",
+       {"id"=>"1",
         "name"=>"Helmet",
         "location"=>"Denver, CO",
         "user_location"=>"Denver, CO",
@@ -19,7 +19,7 @@ class SearchController<ApplicationController
      {"id"=>"1139",
       "type"=>"gear_item",
       "attributes"=>
-       {"id"=>"1139",
+       {"id"=>"2",
         "name"=>"Purple Helmet",
         "location"=>"Denver, CO",
         "user_location"=>"Denver, CO",
