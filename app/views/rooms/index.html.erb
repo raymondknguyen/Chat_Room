@@ -1,3 +1,4 @@
+<h1>Inbox</h1>
 <div class="container-fluid">
   <div class="row">
     <div class="col-4">
@@ -15,46 +16,22 @@
         <% end %>
       </div>
       <div class="col-8">
-      <% if @room.present? %>
-        <h2>hello, <%= current_user.name %></h2>
+        <% if @room.present? %>
+        <h2>Hello, <%= current_user.name %></h2>
         <div class="chat-room">
-          <h3><%= @room.name %></h3>
+          <h3><%= @room.name.capitalize %></h3>
           <div id="messages">
-          <% @room.messages.each do |message| %>>
-            <%= render 'messages/message', message: message %>
+            <% @room.messages.each do |message| %>
+              <p><%= message.content %> - <%= message.user.name %></p>
+            <% end %>
           </div>
-          <div class="chat-box">
-          <% end %>
-            <%= render 'messages/form', message: Message.new, room: @room %>
-          </div>
-        </div>  
-      <% end %>
-    </div>
+        </div>
+        <div class="chat-box">
+          <%= render 'messages/form', message: Message.new, room: @room %>
+        </div>
+        <% end %>
+      </div>  
     </div>
   </div>
 </div>
-<h1>Inbox</h1>
 
-<table>
-  <thead>
-    <tr>
-      <th>Name</th>
-      <th colspan="3"></th>
-    </tr>
-  </thead>
-
-  <tbody>
-    <% @rooms.each do |room| %>
-      <tr>
-        <td><%= room.name %></td>
-        <td><%= link_to 'Show', room %></td>
-        <td><%= link_to 'Edit', edit_room_path(room) %></td>
-        <td><%= link_to 'Destroy', room, method: :delete, data: { confirm: 'Are you sure?' } %></td>
-      </tr>
-    <% end %>
-  </tbody>
-</table>
-
-<br>
-
-<%= link_to 'New Room', new_room_path %>

@@ -10,23 +10,18 @@
       </ul>
     </div>
   <% end %>
-
-  <div class="field">
-    <%= form.label :content %>
-    <%= form.text_area :content %>
-  </div>
-
-  <div class="field">
-    <%= form.label :user_id %>
-    <%= form.text_field :user_id %>
-  </div>
-
-  <div class="field">
-    <%= form.label :room_id %>
-    <%= form.text_field :room_id %>
-  </div>
-
-  <div class="actions">
-    <%= form.submit %>
+  <div class="container-fluid">
+  <div class="row">
+    <div class="col-5">
+        <%= form.text_area :content %>
+    </div>
+    <%= form.hidden_field :room_id, value: room.id %>
+    <div class="col-9">
+      <div class="actions">
+        <%= form.submit 'Send' %>
+      </div>
+      </div>
+      </div>
+    </div>
   </div>
 <% end %>
