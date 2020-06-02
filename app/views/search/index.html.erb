@@ -2,7 +2,7 @@
     <meta name='turbolinks-visit-control' content='reload'>
     <script>
     document.addEventListener("DOMContentLoaded", function(){
-        initMap("39.7392", "-104.9903")
+        initMap(<%=@coordinates["latitude"]%>, <%=@coordinates["longitude"]%>, <%=@json_results%>)
     });
     </script>
 <% end %>
