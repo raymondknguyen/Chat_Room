@@ -1,6 +1,39 @@
-<p id="notice"><%= notice %></p>
-
-<h1>Rooms</h1>
+<div class="container-fluid">
+  <div class="row">
+    <div class="col-4">
+        <%= render 'form', room: Room.new %>
+        <hr>
+        <% @rooms.each do |room|%>
+          <%= link_to room do %>
+          <div class="card">
+            <div class="card-body mb-2">
+              <%= room.name.capitalize%><br>
+              <%= link_to 'Delete', room, method: :delete %>
+            </div>
+          </div>
+          <% end %>
+        <% end %>
+      </div>
+      <div class="col-8">
+      <% if @room.present? %>
+        <h2>hello, <%= current_user.name %></h2>
+        <div class="chat-room">
+          <h3><%= @room.name %></h3>
+          <div id="messages">
+          <% @room.messages.each do |message| %>>
+            <%= render 'messages/message', message: message %>
+          </div>
+          <div class="chat-box">
+          <% end %>
+            <%= render 'messages/form', message: Message.new, room: @room %>
+          </div>
+        </div>  
+      <% end %>
+    </div>
+    </div>
+  </div>
+</div>
+<h1>Inbox</h1>
 
 <table>
   <thead>
