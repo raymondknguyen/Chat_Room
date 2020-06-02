@@ -6,7 +6,8 @@ class SearchController<ApplicationController
   def index
     @gear_items = GearItem.find_matches(query_params[:keyword].downcase)
     #I think this is where we'll want to make the call to our microservice, using @gear_items and location_params
-    request = render json: GearItemSerializer.new(@gear_items, {params: {location: location_params[:location], distance: location_params[:distance]}})
+    request = render json: GearItemSerializer.new(@gear_items, {params: {location: location_params[:location],
+                                                                         distance: location_params[:distance]}})
     parsed_request = JSON.parse(request)
   end
 
