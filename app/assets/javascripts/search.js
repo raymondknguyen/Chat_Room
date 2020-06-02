@@ -5,20 +5,15 @@ function initMap(lat, lng) {
     zoom: 6
     };
     var map = new google.maps.Map(document.getElementById('map'), mapOptions);
+}
+
+function addMarkers(results) {
+  for (var i = 0; i < results.length; i++) {
+    var coords = results.attributes.coordinates;
+    var latLng = new google.maps.LatLng(coords["latitude"],coords["longitude"]);
     var marker = new google.maps.Marker({
-        position: {lat: 39.74, lng: -104.99},
-        map: map,
-        title: "Cool Helmet"
+      position: latLng,
+      map: map
     });
-    var marker2 = new google.maps.Marker({
-        position: {lat: 39.19, lng: -106.82},
-        map: map,
-        title: "Purple Helmet"
-    });
-    marker.addListener('click', function() {
-      window.open("/gear_items/3", '_blank');
-    });
-    marker2.addListener('click', function() {
-      window.open("/gear_items/9", '_blank');
-    });
+  }
 }

@@ -1,8 +1,14 @@
 <% provide :head_tags do %>
+
     <meta name='turbolinks-visit-control' content='reload'>
     <script>
     document.addEventListener("DOMContentLoaded", function(){
-        initMap("39.7392", "-104.9903")
+        initMap(<%=@user_location["latitude"]%>, <%=@user_location["longitude"]%>)
+    });
+    </script>
+    <script>
+    document.addEventListener("DOMContentLoaded", function(){
+        addMarkers(<%=@matching_items%>)
     });
     </script>
 <% end %>
