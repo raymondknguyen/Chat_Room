@@ -3,12 +3,7 @@
     <meta name='turbolinks-visit-control' content='reload'>
     <script>
     document.addEventListener("DOMContentLoaded", function(){
-        initMap(<%=@user_location["latitude"]%>, <%=@user_location["longitude"]%>)
-    });
-    </script>
-    <script>
-    document.addEventListener("DOMContentLoaded", function(){
-        addMarkers(<%=@matching_items%>)
+        initMap(<%=@coordinates["latitude"]%>, <%=@coordinates["longitude"]%>, <%=@json_results%>)
     });
     </script>
 <% end %>

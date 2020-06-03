@@ -1,19 +1,27 @@
-function initMap(lat, lng) {
+function initMap(lat, lng, results) {
     var myCoords = new google.maps.LatLng(lat, lng);
     var mapOptions = {
     center: myCoords,
     zoom: 6
     };
-    var map = new google.maps.Map(document.getElementById('map'), mapOptions);
-}
 
-function addMarkers(results) {
-  for (var i = 0; i < results.length; i++) {
-    var coords = results.attributes.coordinates;
-    var latLng = new google.maps.LatLng(coords["latitude"],coords["longitude"]);
-    var marker = new google.maps.Marker({
-      position: latLng,
-      map: map
-    });
-  }
+    var map = new google.maps.Map(document.getElementById('map'), mapOptions);
+
+    var array = results;
+
+    var marker, i;
+
+    for (i = 0; i < array.length; i++) {
+      marker = new google.maps.Marker({
+        position: new google.maps.LatLng(array[i].lat, array[i].lng),
+        map: map,
+        name: array[i].name
+      });
+
+      google.maps.event.addListener(marker, 'click', (function(marker, i) {
+        return function() {
+          window.open(`${array[i].url}`, '_blank');
+        }
+      })(marker, i));
+    }
 }
