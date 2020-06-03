@@ -59,3 +59,8 @@ div.expandable {
     transform: translateY(0);
   }
 }
+
+.thumbnail img {
+  max-width: 300px;
+  max-height: 300px
+}
