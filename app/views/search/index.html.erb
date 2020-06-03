@@ -1,9 +1,29 @@
-<h1 align=center>Here are your search results:</h1>
 
-<% @gear_items.each do |gear_item| %>
-  <div class="result">
-    <p class="name"><%=link_to "#{gear_item.name}", "/gear_items/#{gear_item.id}" %></p>
-    <p class="location">Located In: <%= gear_item.location%></p>
-    <p class="price">Price Per Day: $<%= gear_item.price %></p>
-  </div>
+<% provide :head_tags do %>
+    <meta name='turbolinks-visit-control' content='reload'>
+    <script>
+    document.addEventListener("DOMContentLoaded", function(){
+        initMap("39.7392", "-104.9903")
+    });
+    </script>
 <% end %>
+
+<table>
+  <tr>
+    <h1 align=center>Here are your search results:</h1>
+    <td class="results">
+      <% @gear_items.each do |gear_item| %>
+        <div class="result">
+          <p class="name"><%=link_to "#{gear_item.name}", "/gear_items/#{gear_item.id}" %></p>
+          <p class="location">Located In: <%= gear_item.location%></p>
+          <p class="price">Price Per Day: $<%= gear_item.price %></p>
+        </div>
+      <% end %>
+    </td>
+    <td>
+      <p>
+        <div id="map"></div>
+      </p>
+    </td>
+  </tr>
+</table>

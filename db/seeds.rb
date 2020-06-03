@@ -53,11 +53,52 @@ collin = Owner.create(name: 'Collin')
 ashley = Owner.create(name: 'Ashley')
 lucii = Owner.create(name: 'Lucii')
 
-snowboard = GearItem.create(name: 'Snowboard', description: 'a board to snow', price: 250.5, condition: 0, status: 0, location: 'denver', owner: collin)
-bike = GearItem.create(name: 'BMX', description: 'fastest bike in town', price: 2.5, condition: 0, status: 0, location: 'denver', owner: collin)
-helmet = GearItem.create(name: 'Helmet', description: 'this will protect your head', price: 45.0, condition: 0, status: 0, location: 'denver', owner: collin)
-tent = GearItem.create(name: 'Tent', description: 'this tent will protect you from thunder', price: 224.5, condition: 0, status: 0, location: 'denver', owner: collin)
-camper = GearItem.create(name: 'Big Camper', description: 'take it in the water and you have nothing', price: 200.5, condition: 0, status: 0, location: 'denver', owner: collin)
+snowboard = GearItem.create(
+  name: 'Snowboard',
+  description: 'a board to snow',
+  price: 250.5,
+  condition: 0,
+  status: 0,
+  location: 'denver',
+  owner: collin
+)
+bike = GearItem.create(
+  name: 'BMX',
+  description: 'fastest bike in town',
+  price: 2.5,
+  condition: 0,
+  status: 0,
+  location: 'denver',
+  owner: collin
+)
+helmet = GearItem.create(
+  name: 'Helmet',
+  description: 'this will protect your head',
+  price: 45.0,
+  condition: 0,
+  status: 0,
+  location: 'denver',
+  owner: collin,
+  photo: 'https://smhttp-ssl-58099.nexcesscdn.net/pub/media/catalog/product/cache/1/image/700x560/e9c3970ab036de70892d86c6d221abfe/r/f/rf-1100-black.png'
+)
+tent = GearItem.create(
+  name: 'Tent',
+  description: 'this tent will protect you from thunder',
+  price: 224.5,
+  condition: 0,
+  status: 0,
+  location: 'denver',
+  owner: collin
+)
+camper = GearItem.create(
+  name: 'Big Camper',
+  description: 'take it in the water and you have nothing',
+  price: 200.5,
+  condition: 0,
+  status: 0,
+  location: 'denver',
+  owner: collin
+)
 
 skates = GearItem.create(name: 'Skates', description: 'skates that will roll circles around your neighbor', price: 85.5, condition: 0, status: 0, location: 'denver', owner: ashley)
 ski = GearItem.create(name: 'Skis', description: 'skis to ski', price: 100.5, condition: 0, status: 0, location: 'aurora', owner: ashley)
