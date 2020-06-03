@@ -1,3 +1,6 @@
+<div id="room-id" data-room-id="<%= @room.try(:id) %>"></div>
+<div id="user-id" data-userid="<%= current_user.id %>"></div>
+
 <h1>Inbox</h1>
 <div class="container-fluid">
   <div class="row">
@@ -22,7 +25,7 @@
           <h3><%= @room.name.capitalize %></h3>
           <div id="messages">
             <% @room.messages.each do |message| %>
-              <p><%= message.content %> - <%= message.user.name %></p>
+              <%= render 'messages/message', message: message %>
             <% end %>
           </div>
         </div>

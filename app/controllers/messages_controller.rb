@@ -27,7 +27,7 @@ class MessagesController < ApplicationController
     @message = Message.new(message_params)
     @message.user = current_user
     @message.save
-    ActionCable.server.broadcast "room_channel_#{@message.room_id}", message: "hello"
+    MessageBroadcastJob.perform_later(@message)
   end
 
   # PATCH/PUT /messages/1
