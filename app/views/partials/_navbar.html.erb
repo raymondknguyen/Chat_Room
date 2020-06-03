@@ -6,7 +6,7 @@
 
     <% if current_user %>
       <div>
-        <%= link_to 'Log Out', '/logout' %>
+        <%= link_to 'Log Out', '/logout', method: :delete %>
         <%= link_to 'Profile', '/profile' %>
       </div>
     <% else %>

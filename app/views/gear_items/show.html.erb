@@ -8,7 +8,7 @@
 </div>
 
 <% if current_user %>
-  <%= link_to 'Rent Gear', "/gear_items/#{@item.id}/rent" %>
+  <%= link_to 'Rent Gear', "/rental/#{@item.id}" %>
 <% else %>
   <h3><%= link_to 'Login to Rent', '/auth/google_oauth2' %></h3>
 <% end %>

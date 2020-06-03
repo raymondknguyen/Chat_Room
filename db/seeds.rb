@@ -6,16 +6,15 @@
 #   movies = Movie.create([{ name: 'Star Wars' }, { name: 'Lord of the Rings' }])
 #   Character.create(name: 'Luke', movie: movies.first)
 
+Rental.destroy_all
 User.destroy_all
 GearItem.destroy_all
 Owner.destroy_all
-Rental.destroy_all
 puts "Cleared DB!"
 
 kate = User.create!( username: "Kayaking Kate",
                        name: "Kate Smith",
                        email: "kate@example.com",
-                       password: "password",
                        street_address: "123 Mulberry Street",
                        state: "CO",
                        zip: "80303",
@@ -27,7 +26,6 @@ kate = User.create!( username: "Kayaking Kate",
 alex = User.create!( username: "Adventurous Alex",
                        name: "Alex Rodriguez",
                        email: "alex@example.com",
-                       password: "password",
                        street_address: "540 Turner Street",
                        state: "MT",
                        zip: "57894",
@@ -36,10 +34,15 @@ alex = User.create!( username: "Adventurous Alex",
                        age: "54",
                        about_me: "I love to travel with my wife and kids to new places."
                      )
+
+margo = User.create!( name: "Margo Flewelling",
+                      email: "flewelling.margo@gmail.com",
+                      about_me: 'Outdoors enthusiast. I love skiing, climbing, and biking with my pup Roo',
+                      profile_picture: "https://images.robertharding.com/preview/RF/CI/HORIZONTAL/857-78896.jpg")
+
 hillary = User.create!( username: "Hiking Hillary",
                        name: "Hillary Jones",
                        email: "hillary@example.com",
-                       password: "password",
                        street_address: "415 Wewatta Street",
                        state: "CO",
                        zip: "80501",
@@ -104,9 +107,10 @@ skates = GearItem.create(name: 'Skates', description: 'skates that will roll cir
 ski = GearItem.create(name: 'Skis', description: 'skis to ski', price: 100.5, condition: 0, status: 0, location: 'aurora', owner: ashley)
 bench = GearItem.create(name: 'Bench', description: 'you sit on this', price: 95.0, condition: 0, status: 0, location: 'aurora', owner: ashley)
 
-backpack = GearItem.create(name: 'Backpack', description: 'can carry your stuff', price: 35.0, condition: 0, status: 0, location: 'aurora', owner: lucii)
+helmet_2 = GearItem.create(name: 'Purple Helmet', description: 'do not break your head', price: 35.0, condition: 0, status: 0, location: 'aurora', owner: lucii)
 
-rental_1 = Rental.create!(start_date: 2020-05-01, end_date: 2020-05-15, user_id: hillary.id, gear_item_id: tent.id)
-rental_2 = Rental.create!(start_date: 2020-06-05, end_date: 2020-06-10, user_id: alex.id, gear_item_id: camper.id)
-rental_3 = Rental.create!(start_date: 2020-07-10, end_date: 2020-07-15, user_id: kate.id, gear_item_id: backpack.id)
-rental_4 = Rental.create!(start_date: 2020-07-10, end_date: 2020-07-15, user_id: kate.id, gear_item_id: bike.id)
+rental_1 = Rental.create!(start_date: "2020-05-01", end_date: "2020-05-15", user_id: margo.id, gear_item_id: tent.id, status: 'approved')
+rental_2 = Rental.create!(start_date: "2020-06-05", end_date: "2020-06-10", user_id: kate.id, gear_item_id: camper.id)
+rental_3 = Rental.create!(start_date: "2020-05-30", end_date: "2020-06-12", user_id: margo.id, gear_item_id: snowboard.id, status: 'approved')
+rental_4 = Rental.create!(start_date: "2020-07-10", end_date: "2020-07-15", user_id: margo.id, gear_item_id: bike.id)
+rental_5 = Rental.create!(start_date: "2020-07-10", end_date: "2020-07-15", user_id: margo.id, gear_item_id: helmet.id, status: 'approved')
