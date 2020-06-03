@@ -29,11 +29,13 @@ body {
 }
 
 .main_page {
+  overflow: hidden;
   box-shadow: 0 0 10px #6d6e71;
   background-color: #FFFFFF;
   margin-left: 150px;
   margin-right: 150px;
   margin-top: 15px;
+  margin-bottom: 100px;
   padding: 40px;
   height: auto;
 }
@@ -61,6 +63,15 @@ div.expandable {
 }
 
 .thumbnail img {
-  max-width: 300px;
-  max-height: 300px
+  max-width: 200px;
+  max-height: 200px
+}
+
+.result {
+  height: 300px
+}
+
+.search_results {
+  float: left;
+  width: 33%;
 }
