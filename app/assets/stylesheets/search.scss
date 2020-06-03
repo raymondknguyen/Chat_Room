@@ -1,9 +1,16 @@
 #map {
-    width: 600px;
+    float: right;
+    width: 50%;
     height: 400px;
     title: true
 }
 
-.search_form label {
+form label {
+  margin-bottom: 10px;
+  margin-top: 10px;
+}
+
+form input {
+  margin-bottom: 10px;
   margin-top: 10px;
 }
