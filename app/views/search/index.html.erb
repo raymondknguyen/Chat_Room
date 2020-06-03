@@ -11,7 +11,7 @@
 <h1 align=center>Here are your search results:</h1>
 
 
-<% @parsed_response.each do |gear_item| %>
+<% @parsed_item_response.each do |gear_item| %>
   <div class="result">
     <p class="name"><%=link_to "#{gear_item["attributes"]["name"]}", "/gear_items/#{gear_item["attributes"]["id"]}" %></p>
     <p class="location">Located In: <%= gear_item["attributes"]["location"]%></p>
