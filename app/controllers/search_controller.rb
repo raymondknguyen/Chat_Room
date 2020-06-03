@@ -24,7 +24,7 @@ class SearchController<ApplicationController
         "location"=>"Denver, CO",
         "user_location"=>"Denver, CO",
         "distance"=>"15",
-        "coordinates"=>{"latitude"=>39.750605, "longitude"=>-104.990926}}}]
+        "coordinates"=>{"latitude"=>39.1911, "longitude"=>-106.8175}}}]
 
       results = []
       parsed_response.each do |item|
