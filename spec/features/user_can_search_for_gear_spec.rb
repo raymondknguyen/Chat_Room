@@ -45,13 +45,14 @@ describe "as a visitor or user" do
 
     click_button "Search"
 
-    expect(page).to have_css(".result", count: 3)
+    expect(page).to have_css(".result", count: 2)
 
     within(first(".result")) do
       expect(page).to have_css(".name")
-      expect(page).to have_css(".price")
       expect(page).to have_css(".location")
     end
+
+    expect(page).to have_css("#map")
 
     end
   end

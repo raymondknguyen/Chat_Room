@@ -4,38 +4,21 @@ class SearchController<ApplicationController
   end
 
   def index
-    @gear_items = GearItem.find_matches(query_params[:keyword].downcase)
+    gear_items = GearItem.find_matches(query_params[:keyword].downcase)
     #I think this is where we'll want to make the call to our microservice, using @gear_items and location_params
-    request = render json: GearItemSerializer.new(@gear_items, {params: {location: location_params[:location],
-                                                                     distance: location_params[:distance]}})
+    request = GearItemSerializer.new(gear_items, {params: {location: location_params[:location],
+                                                                     distance: location_params[:distance]}}).serialized_json
 
     conn = Faraday.new(
       url: 'https://frozen-coast-45441.herokuapp.com')
 
-    response = conn.post("/locations?items=#{request}")
+    item_results = conn.post("/locations?items=#{request}")
+    coordinate_results = conn.post("/user_location?items=#{request}")
 
-    @coordinates = {"latitude"=>39.750605, "longitude"=>-104.990926}
-    parsed_response = [{"id"=>"1137",
-      "type"=>"gear_item",
-      "attributes"=>
-       {"id"=>"1",
-        "name"=>"Helmet",
-        "location"=>"Denver, CO",
-        "user_location"=>"Denver, CO",
-        "distance"=>"15",
-        "coordinates"=>{"latitude"=>39.750605, "longitude"=>-104.990926}}},
-     {"id"=>"1139",
-      "type"=>"gear_item",
-      "attributes"=>
-       {"id"=>"2",
-        "name"=>"Purple Helmet",
-        "location"=>"Denver, CO",
-        "user_location"=>"Denver, CO",
-        "distance"=>"15",
-        "coordinates"=>{"latitude"=>39.1911, "longitude"=>-106.8175}}}]
+      @parsed_response = JSON.parse(item_results.body)
 
       results = []
-      parsed_response.each do |item|
+      @parsed_response.each do |item|
         result = {lat: item["attributes"]["coordinates"]["latitude"],
          lng: item["attributes"]["coordinates"]["longitude"],
          name: item["attributes"]["name"],
@@ -44,10 +27,7 @@ class SearchController<ApplicationController
         results << result
       end
       @json_results = results.to_json.html_safe
-
-
-
-
+      @coordinates = JSON.parse(coordinate_results.body)
   end
 
   private
