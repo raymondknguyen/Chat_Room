@@ -39,13 +39,12 @@ class SearchController<ApplicationController
       @json_results = results.to_json.html_safe
 
 
-    request = render json: GearItemSerializer.new(@gear_items, {params: {location: location_params[:location],
-                                                                         distance: location_params[:distance]}})
-    parsed_request = JSON.parse(request)
+    #request = render json: GearItemSerializer.new(@gear_items, {params: {location: location_params[:location],
+            #                                                             distance: location_params[:distance]}})
+    #parsed_request = JSON.parse(request)
 
   end
 
-  end
   private
 
   def query_params
