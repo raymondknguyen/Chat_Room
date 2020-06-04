@@ -2,7 +2,7 @@
 <h2>What do you want to rent?</h2>
 
 <hr>
-<%= form_tag '/search', method: :get, class: 'search_form' do |f| %>
+<%= form_tag '/search', method: :get do |f| %>
 
 <%= label_tag "Type of Gear" %><br>
 <%= text_field_tag :keyword %><br>

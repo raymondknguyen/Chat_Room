@@ -37,6 +37,7 @@ gem 'mini_magick', '~> 4.8'
 gem 'bootsnap', '>= 1.1.0', require: false
 gem 'omniauth-google-oauth2'
 gem 'bootstrap'
+gem 'fast_jsonapi'
 gem 'redis'
 gem 'jquery-rails'
 

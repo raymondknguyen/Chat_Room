@@ -45,14 +45,47 @@ describe "as a visitor or user" do
 
     click_button "Search"
 
-    expect(page).to have_css(".result", count: 3)
+    expect(page).to have_css(".result", count: 2)
 
     within(first(".result")) do
       expect(page).to have_css(".name")
-      expect(page).to have_css(".price")
       expect(page).to have_css(".location")
     end
 
+    expect(page).to have_css("#map")
+
+    end
+
+    it "If no items match my search I see a message telling me so" do
+
+    visit '/'
+
+    fill_in :location, with: "Denver, CO"
+    fill_in :keyword, with: "motorcycle"
+    fill_in :distance, with: 15
+    fill_in :start_date, with: "08/10/2020"
+    fill_in :end_date, with: "08/15/2020"
+
+    click_button "Search"
+
+    expect(page).to_not have_css("#map")
+
+    expect(page).to have_content "Sorry, no items match your search"
+    end
+
+    it "If no items match my search radius I see a message telling me so" do
+
+    visit '/'
+
+    fill_in :location, with: "Boulder, CO"
+    fill_in :keyword, with: "helmet"
+    fill_in :distance, with: 5
+    fill_in :start_date, with: "08/10/2020"
+    fill_in :end_date, with: "08/15/2020"
+
+    click_button "Search"
+
+    expect(page).to have_content "Sorry, no items match your search"
     end
   end
 end
