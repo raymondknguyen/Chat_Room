@@ -29,6 +29,7 @@ gem 'bcrypt', '~> 3.1.7'
 
 # Use ActiveStorage variant
 gem 'mini_magick', '~> 4.8'
+gem 'faker'
 
 # Use Capistrano for deployment
 # gem 'capistrano-rails', group: :development
@@ -50,7 +51,6 @@ group :development, :test do
   gem "capybara"
   gem 'factory_bot_rails'
   gem 'launchy'
-  gem 'faker'
   gem 'figaro'
 end
 
