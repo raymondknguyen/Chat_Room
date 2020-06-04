@@ -1,23 +1,26 @@
 <% provide :head_tags do %>
+
     <meta name='turbolinks-visit-control' content='reload'>
     <script>
     document.addEventListener("DOMContentLoaded", function(){
-        initMap("39.7392", "-104.9903")
+        initMap(<%=@coordinates["latitude"]%>, <%=@coordinates["longitude"]%>, <%=@json_results%>)
     });
     </script>
 <% end %>
 
 <h1 align=center>Here are your search results:</h1>
 
-
-<% @gear_items.each do |gear_item| %>
+<% if @results.length == 0 %>
+<p align=center>Sorry, no items match your search request</p>
+<% else %>
+<% @results.each do |gear_item| %>
   <div class="result">
     <p class="name"><%=link_to "#{gear_item.name}", "/gear_items/#{gear_item.id}" %></p>
-    <p class="location">Located In: <%= gear_item.location%></p>
-    <p class="price">Price Per Day: $<%= gear_item.price %></p>
+    <p class="location">Located In: <%= gear_item.location.capitalize%></p>
   </div>
 <% end %>
 
 <p>
   <div id="map"></div>
 </p>
+<% end %>
