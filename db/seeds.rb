@@ -10,6 +10,7 @@ Rental.destroy_all
 User.destroy_all
 GearItem.destroy_all
 Owner.destroy_all
+Message.destroy_all
 puts "Cleared DB!"
 
 kate = User.create!( username: "Kayaking Kate",
