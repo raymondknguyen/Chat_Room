@@ -1,6 +1,6 @@
 nav.primary_nav {
   background-color: #FFF;
-  height: 60px;
+  height: 90px;
   box-shadow: 0 0 10px #6d6e71;
   z-index: -1;
 }
@@ -19,5 +19,14 @@ nav.primary_nav {
   font-weight: bold;
   color: #6d6e71;
   margin-right: 40px;
-  margin-top: 15px;
+  margin-top: 35px;
+}
+
+
+.logo {
+  float: left;
+  margin-left: 80px;
+  margin-top: 0px;
+  padding: 0px;
+  height: 15px;
 }
