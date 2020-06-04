@@ -12,6 +12,7 @@
 
 <% if @results.length == 0 %>
     <p align=center>Sorry, no items match your search request</p>
+    <%= link_to "Search Again", "/" %>
 <% else %>
 <table class='search_results'>
   <tr>
