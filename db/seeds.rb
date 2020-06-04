@@ -56,7 +56,12 @@ collin = Owner.create(name: 'Collin')
 ashley = Owner.create(name: 'Ashley')
 lucii = Owner.create(name: 'Lucii')
 
-snowboard = GearItem.create(name: 'Snowboard', description: 'a board to snow', price: 250.5, condition: 0, status: 0, location: 'denver', owner: collin)
+snowboard1 = GearItem.create(name: 'Snowboard', description: Faker::Lorem.paragraph, price: 250.5, condition: 0, status: 0, location: 'denver', owner: collin)
+snowboard2 = GearItem.create(name: 'Snowboard', description: Faker::Lorem.paragraph, price: 250.5, condition: 0, status: 0, location: 'denver', owner: collin)
+snowboard3 = GearItem.create(name: 'Snowboard', description: Faker::Lorem.paragraph, price: 250.5, condition: 0, status: 0, location: 'denver', owner: collin)
+snowboard4 = GearItem.create(name: 'Snowboard', description: Faker::Lorem.paragraph, price: 250.5, condition: 0, status: 0, location: 'denver', owner: collin)
+snowboard5 = GearItem.create(name: 'Snowboard', description: Faker::Lorem.paragraph, price: 250.5, condition: 0, status: 0, location: 'denver', owner: collin)
+
 bike = GearItem.create(name: 'BMX', description: 'fastest bike in town', price: 2.5, condition: 0, status: 0, location: 'denver', owner: collin)
 helmet = GearItem.create(name: 'Helmet', description: 'this will protect your head', price: 45.0, condition: 0, status: 0, location: 'denver', owner: collin)
 tent = GearItem.create(name: 'Tent', description: 'this tent will protect you from thunder', price: 224.5, condition: 0, status: 0, location: 'denver', owner: collin)
@@ -65,6 +70,11 @@ camper = GearItem.create(name: 'Big Camper', description: 'take it in the water 
 skates = GearItem.create(name: 'Skates', description: 'skates that will roll circles around your neighbor', price: 85.5, condition: 0, status: 0, location: 'denver', owner: ashley)
 ski = GearItem.create(name: 'Skis', description: 'skis to ski', price: 100.5, condition: 0, status: 0, location: 'aurora', owner: ashley)
 bench = GearItem.create(name: 'Bench', description: 'you sit on this', price: 95.0, condition: 0, status: 0, location: 'aurora', owner: ashley)
+
+1_000.times do
+  GearItem.create!(name: Faker::Commerce.product_name, description: Faker::Lorem.paragraph, price: Faker::Commerce.price(range: 1..1000.0), inventory: Faker::Number.within(range: 1..1000), merchant: Merchant.random)
+end
+puts "Created Items"
 
 helmet_2 = GearItem.create(name: 'Purple Helmet', description: 'do not break your head', price: 35.0, condition: 0, status: 0, location: 'aurora', owner: lucii)
 
