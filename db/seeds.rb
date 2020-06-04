@@ -51,10 +51,18 @@ hillary = User.create!( username: "Hiking Hillary",
                        age: "32",
                        about_me: "Being outdoors is my favorite place to be."
                      )
+krista = User.create!( name: "Krista Stadler",
+                     email: "stadler.krista@gmail.com",
+                     about_me: 'I love living in Colorado and spending time in the mountains!',
+                     profile_picture: "https://img.theweek.in/content/dam/week/magazine/health/quickscan/images/2019/7/20/10-Nature-the-best-healer.jpg")
+
+puts "Created Users"
 
 collin = Owner.create(name: 'Collin')
 ashley = Owner.create(name: 'Ashley')
 lucii = Owner.create(name: 'Lucii')
+
+puts "Created Owners"
 
 snowboard1 = GearItem.create(name: 'Rossignol One LF Snowboard', description: Faker::Lorem.paragraph, price: Faker::Commerce.price, condition: 0, status: 0, location: '1634 18th St, Denver, CO 80202', owner: collin, photo: "https://rqncr2pq51u34xp5y2t8cvy1-wpengine.netdna-ssl.com/wp-content/uploads/2019/10/Rossignol-One-LF-Snowboard-Mens.jpg")
 snowboard2 = GearItem.create(name: 'Gnu Asym Carbon Credit Snowboard', description: Faker::Lorem.paragraph, price: Faker::Commerce.price, condition: 0, status: 0, location: '1662 South Pearl St, Denver, CO 80210', owner: collin, photo: "https://rqncr2pq51u34xp5y2t8cvy1-wpengine.netdna-ssl.com/wp-content/uploads/2019/10/Gnu-Asym-Carbon-Credit-Snowboard-Mens.jpg")
@@ -70,30 +78,25 @@ snowshoes5 = GearItem.create(name: 'Atlas Endeavor Snowshoes Review', descriptio
 
 bike1 = GearItem.create(name: 'Cannondale Bad Habit Bike', description: Faker::Lorem.paragraph, price: Faker::Commerce.price, condition: 0, status: 0, location: '16539 Washington St, Thornton, CO 80023', owner: collin, photo: "https://hips.hearstapps.com/hmg-prod.s3.amazonaws.com/images/1/cannondale-bad-habit-556-1520447534.jpg")
 bike2 = GearItem.create(name: 'Liv Lust Advanced 1 Bike', description: Faker::Lorem.paragraph, price: Faker::Commerce.price, condition: 0, status: 0, location: '1331 17th St, Denver, CO 80202', owner: collin, photo: "https://hips.hearstapps.com/hmg-prod.s3.amazonaws.com/images/1/lust-advanced-1-carbon-556-1520447534.jpg")
-bike3 = GearItem.create(name: 'Pivot Mach 429 Trail Bike', description: Faker::Lorem.paragraph, price: Faker::Commerce.price, condition: 0, status: 0, location: '2922 Baseline Rd, Boulder, CO 80303', owner: collin, photo: "https://hips.hearstapps.com/hmg-prod.s3.amazonaws.com/images/1/2016-pivot-429-trail-rf-single-fox-556-1520447534.jpg")
+bike3 = GearItem.create(name: 'Yeti SB130 TURQ X01 2019 Bike', description: Faker::Lorem.paragraph, price: Faker::Commerce.price, condition: 0, status: 0, location: '2922 Baseline Rd, Boulder, CO 80303', owner: collin, photo: "https://outdoorgearlab-mvnab3pwrvp3t0.stackpathdns.com/photos/22/86/350096_28004_S.jpg")
+bike4 = GearItem.create(name: 'Santa Cruz Hightower CC XO1 Bike', description: Faker::Lorem.paragraph, price: Faker::Commerce.price, condition: 0, status: 0, location: '250 Spader Way, Broomfield, CO 80020', owner: collin, photo: "https://outdoorgearlab-mvnab3pwrvp3t0.stackpathdns.com/photos/20/32/324677_31885_S.jpg")
+bike5 = GearItem.create(name: 'Ibis Ripley GX Eagle 2019 Bike', description: Faker::Lorem.paragraph, price: Faker::Commerce.price, condition: 0, status: 0, location: '8500 Peña Blvd, Denver, CO 80249', owner: collin, photo: "https://outdoorgearlab-mvnab3pwrvp3t0.stackpathdns.com/photos/19/48/316277_12754_S.jpg")
 
-bike4 = GearItem.create(name: 'Winterial Snowshoes', description: Faker::Lorem.paragraph, price: Faker::Commerce.price, condition: 0, status: 0, location: '250 Spader Way, Broomfield, CO 80020', owner: collin, photo: "https://2or2n61eranl2ilm943t35jn-wpengine.netdna-ssl.com/wp-content/uploads/2017/12/51bOvA7E6ZL.jpg")
-bike5 = GearItem.create(name: 'Atlas Endeavor Snowshoes Review', description: Faker::Lorem.paragraph, price: Faker::Commerce.price, condition: 0, status: 0, location: '8500 Peña Blvd, Denver, CO 80249', owner: collin, photo: "https://2or2n61eranl2ilm943t35jn-wpengine.netdna-ssl.com/wp-content/uploads/2017/03/41P0Xu04HRL.jpg")
+helmet1 = GearItem.create(name: 'BONTRAGER HELMET', description: Faker::Lorem.paragraph, price: Faker::Commerce.price, condition: 0, status: 0, location: '1634 18th St, Denver, CO 80202', owner: collin, photo: "https://hips.hearstapps.com/vader-prod.s3.amazonaws.com/1556721990-bontrager-specter-wavecel-road-helmet-1556721975.jpg")
+helmet2 = GearItem.create(name: 'Giro Aether MIPS Helmet', description: Faker::Lorem.paragraph, price: Faker::Commerce.price, condition: 0, status: 0, location: '1662 South Pearl St, Denver, CO 80210', owner: collin, photo: "https://hips.hearstapps.com/vader-prod.s3.amazonaws.com/1556722010-giro-aether-mips-1556722003.jpg")
+helmet3 = GearItem.create(name: 'Bontrager Specter Wavecel Road Helmet', description: Faker::Lorem.paragraph, price: Faker::Commerce.price, condition: 0, status: 0, location: '500 Linden St, Fort Collins, CO 80524', owner: collin, photo: "https://hips.hearstapps.com/vader-prod.s3.amazonaws.com/1556721990-bontrager-specter-wavecel-road-helmet-1556721975.jpg")
+helmet4 = GearItem.create(name: 'Nutcase Metroride MIPS Helmet', description: Faker::Lorem.paragraph, price: Faker::Commerce.price, condition: 0, status: 0, location: '120 Lower, Carriage Way, Snowmass Village, CO 81615', owner: collin, photo: "https://hips.hearstapps.com/vader-prod.s3.amazonaws.com/1556722025-nutcase-metroride-mips-1556722019.jpg")
+helmet5 = GearItem.create(name: 'Bern Allston Helmet', description: Faker::Lorem.paragraph, price: Faker::Commerce.price, condition: 0, status: 0, location: '4580 Broadway, Boulder, CO 80304', owner: collin, photo: "https://hips.hearstapps.com/vader-prod.s3.amazonaws.com/1556722064-bern-allston-1556722054.jpg")
 
+tent = GearItem.create(name: 'Mountain Hardware Stronghold Tent', description: Faker::Lorem.paragraph, price: Faker::Commerce.price, condition: 0, status: 0, location: '2001 Blake St, Denver, CO 80205', owner: collin, photo: 'https://cdn0.wideopenspaces.com/wp-content/uploads/2014/09/62.jpg')
+camper = GearItem.create(name: '2021 WINNEBAGO MINNIE WINNIE 22M Camper', description: Faker::Lorem.paragraph, price: Faker::Commerce.price, condition: 0, status: 0, location: '14504 E I25 Frontage Rd, Longmont, CO 80504', owner: collin, photo: 'https://images.rvs.com/KC1/1746354/500x/2021_winnebago_minnie_winnie_22m_kc11746354_1.jpg')
 
-
-helmet = GearItem.create(name: 'Helmet', description: 'this will protect your head', price: 45.0, condition: 0, status: 0, location: 'denver', owner: collin)
-tent = GearItem.create(name: 'Tent', description: 'this tent will protect you from thunder', price: 224.5, condition: 0, status: 0, location: 'denver', owner: collin)
-camper = GearItem.create(name: 'Big Camper', description: 'take it in the water and you have nothing', price: 200.5, condition: 0, status: 0, location: 'denver', owner: collin)
-
-skates = GearItem.create(name: 'Skates', description: 'skates that will roll circles around your neighbor', price: 85.5, condition: 0, status: 0, location: 'denver', owner: ashley)
-ski = GearItem.create(name: 'Skis', description: 'skis to ski', price: 100.5, condition: 0, status: 0, location: 'aurora', owner: ashley)
-bench = GearItem.create(name: 'Bench', description: 'you sit on this', price: 95.0, condition: 0, status: 0, location: 'aurora', owner: ashley)
-
-1_000.times do
-  GearItem.create!(name: Faker::Commerce.product_name, description: Faker::Lorem.paragraph, price: Faker::Commerce.price(range: 1..1000.0), inventory: Faker::Number.within(range: 1..1000), merchant: Merchant.random)
-end
 puts "Created Items"
-
-helmet_2 = GearItem.create(name: 'Purple Helmet', description: 'do not break your head', price: 35.0, condition: 0, status: 0, location: 'aurora', owner: lucii)
 
 rental_1 = Rental.create!(start_date: "2020-05-01", end_date: "2020-05-15", user_id: margo.id, gear_item_id: tent.id, status: 'approved')
 rental_2 = Rental.create!(start_date: "2020-06-05", end_date: "2020-06-10", user_id: kate.id, gear_item_id: camper.id)
-rental_3 = Rental.create!(start_date: "2020-05-30", end_date: "2020-06-12", user_id: margo.id, gear_item_id: snowboard.id, status: 'approved')
-rental_4 = Rental.create!(start_date: "2020-07-10", end_date: "2020-07-15", user_id: margo.id, gear_item_id: bike.id)
-rental_5 = Rental.create!(start_date: "2020-07-10", end_date: "2020-07-15", user_id: margo.id, gear_item_id: helmet.id, status: 'approved')
+rental_3 = Rental.create!(start_date: "2020-05-30", end_date: "2020-06-12", user_id: margo.id, gear_item_id: snowboard1.id, status: 'approved')
+rental_4 = Rental.create!(start_date: "2020-07-10", end_date: "2020-07-15", user_id: margo.id, gear_item_id: showshoes2.id)
+rental_5 = Rental.create!(start_date: "2020-07-10", end_date: "2020-07-15", user_id: margo.id, gear_item_id: helmet3.id, status: 'approved')
+
+puts "Created Rentals"
