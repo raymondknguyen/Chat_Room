@@ -27,6 +27,8 @@ document.addEventListener('turbolinks:load', () => {
   
       const messageContainer = document.getElementById('messages')
       messageContainer.innerHTML = messageContainer.innerHTML + html
+      window.scrollTo(0, document.body.scrollHeight);
+
     }
   });
 })
