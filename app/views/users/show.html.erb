@@ -23,7 +23,7 @@
     </tr>
     <% current_user.requested_rentals.each do |rental| %>
     <tr>
-      <td class="thumbnail"><%= image_tag rental.gear_item.photo if rental.gear_item.photo %><td>
+      <td class="thumbnail"><%= image_tag rental.gear_item.photo if rental.gear_item.photo %></td>
       <td><p><%=link_to "#{rental.gear_item.name}", "/gear_items/#{rental.gear_item.id}" %> </p></td>
       <td><p><%= rental.start_date %> </p></td>
       <td><p><%= rental.end_date %> </p></td>
@@ -45,7 +45,7 @@
     </tr>
     <% current_user.current_rentals.each do |rental| %>
     <tr>
-      <td class="thumbnail"><%= image_tag rental.gear_item.photo if rental.gear_item.photo %><td>
+      <td class="thumbnail"><%= image_tag rental.gear_item.photo if rental.gear_item.photo %></td>
       <td><p><%=link_to "#{rental.gear_item.name}", "/gear_items/#{rental.gear_item.id}" %> </p></td>
       <td><p><%= rental.start_date %> </p></td>
       <td><p><%= rental.end_date %> </p></td>
@@ -67,7 +67,7 @@
     </tr>
     <% current_user.upcoming_rentals.each do |rental| %>
     <tr>
-      <td class="thumbnail"><%= image_tag rental.gear_item.photo if rental.gear_item.photo %><td>
+      <td class="thumbnail"><%= image_tag rental.gear_item.photo if rental.gear_item.photo %></td>
       <td><p><%=link_to "#{rental.gear_item.name}", "/gear_items/#{rental.gear_item.id}" %> </p></td>
       <td><p><%= rental.start_date %> </p></td>
       <td><p><%= rental.end_date %> </p></td>
@@ -89,7 +89,7 @@
     </tr>
     <% current_user.past_rentals.each do |rental| %>
     <tr>
-      <td class="thumbnail"><%= image_tag rental.gear_item.photo if rental.gear_item.photo %><td>
+      <td class="thumbnail"><%= image_tag rental.gear_item.photo if rental.gear_item.photo %></td>
       <td><p><%=link_to "#{rental.gear_item.name}", "/gear_items/#{rental.gear_item.id}" %> </p></td>
       <td><p><%= rental.start_date %> </p></td>
       <td><p><%= rental.end_date %> </p></td>
