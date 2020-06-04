@@ -5,10 +5,16 @@ class SearchController<ApplicationController
 
   def index
     gear_items = GearItem.find_matches(query_params[:keyword].downcase)
-    request = GearItemSerializer.new(gear_items, {params: {location: location_params[:location],
-                                                           distance: location_params[:distance]}}).serialized_json
-    get_matching_items(request)
-    get_user_coordinates(request)
+    if gear_items.length > 0
+      request = GearItemSerializer.new(gear_items, {params: {location: location_params[:location],
+                                                             distance: location_params[:distance]}}).serialized_json
+      get_matching_items(request)
+      get_user_coordinates(request)
+
+    else
+      flash[:error] = "Sorry, no items match your search"
+      redirect_back(fallback_location: "/")
+    end
   end
 
   private

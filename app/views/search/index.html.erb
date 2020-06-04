@@ -10,7 +10,9 @@
 
 <h1 align=center>Here are your search results:</h1>
 
-
+<% if @results.length == 0 %>
+<p align=center>Sorry, no items match your search request</p>
+<% else %>
 <% @results.each do |gear_item| %>
   <div class="result">
     <p class="name"><%=link_to "#{gear_item.name}", "/gear_items/#{gear_item.id}" %></p>
@@ -21,3 +23,4 @@
 <p>
   <div id="map"></div>
 </p>
+<% end %>
