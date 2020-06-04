@@ -1,5 +1,5 @@
 Rails.application.routes.draw do
-  mount ActionCable.server => '/cable'
+  # mount ActionCable.server => '/cable'
   resources :messages
   resources :rooms
   get '/rooms', to: 'rooms#index'
