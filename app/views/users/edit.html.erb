@@ -3,13 +3,13 @@
   <%= form_tag '/profile', method: :patch do |f| %>
 
   <%= label_tag "Profile Picture" %><br>
-  <%= text_field_tag :profile_picture %><br>
+  <%= text_field_tag :profile_picture, "#{current_user.profile_picture}" %><br>
 
   <%= label_tag "About Me" %><br>
-  <%= text_field_tag :about_me %><br>
+  <%= text_area_tag :about_me, "#{current_user.about_me}" %><br>
 
   <%= label_tag "Age" %></br>
-  <%= number_field_tag :age %><br>
+  <%= number_field_tag :age, "#{current_user.age}"%><br>
 
   <%= submit_tag 'Save' %>
   <% end %>
