@@ -1,24 +1,27 @@
-function initMap(lat, lng) {
+function initMap(lat, lng, results) {
     var myCoords = new google.maps.LatLng(lat, lng);
     var mapOptions = {
     center: myCoords,
     zoom: 6
     };
+
     var map = new google.maps.Map(document.getElementById('map'), mapOptions);
-    var marker = new google.maps.Marker({
-        position: {lat: 39.74, lng: -104.99},
+
+    var array = results;
+
+    var marker, i;
+
+    for (i = 0; i < array.length; i++) {
+      marker = new google.maps.Marker({
+        position: new google.maps.LatLng(array[i].lat, array[i].lng),
         map: map,
-        title: "Cool Helmet"
-    });
-    var marker2 = new google.maps.Marker({
-        position: {lat: 39.19, lng: -106.82},
-        map: map,
-        title: "Purple Helmet"
-    });
-    marker.addListener('click', function() {
-      window.open("/gear_items/3", '_blank');
-    });
-    marker2.addListener('click', function() {
-      window.open("/gear_items/9", '_blank');
-    });
+        name: array[i].name
+      });
+
+      google.maps.event.addListener(marker, 'click', (function(marker, i) {
+        return function() {
+          window.open(`${array[i].url}`, '_blank');
+        }
+      })(marker, i));
+    }
 }

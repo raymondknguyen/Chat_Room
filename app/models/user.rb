@@ -1,5 +1,5 @@
 class User < ApplicationRecord
-  has_many :rentals
+  has_many :rentals, dependent: :destroy
   has_many :gear_items, through: :rentals
 
   validates :name, presence: true
