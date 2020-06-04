@@ -59,7 +59,7 @@ describe "as a user" do
 
      expect(current_path).to eq("/gear_items/#{@snowboard.id}")
 
-     expect(page).to have_content("pending")
+     expect(page).to have_content("Pending")
    end
 
    it "Request is not successful if date fields are not complete" do

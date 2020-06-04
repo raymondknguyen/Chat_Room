@@ -12,7 +12,7 @@ RSpec.describe 'as a user' do
       expect(page).to have_content(item1.name)
       expect(page).to have_content(item1.description)
       expect(page).to have_content(item1.price)
-      expect(page).to have_content(item1.status)
+      expect(page).to have_content(item1.status.capitalize)
       expect(page).to have_css("img[src*='#{item1.photo}']")
       expect(page).to_not have_content(item2.name)
     end
@@ -30,7 +30,7 @@ RSpec.describe 'as a user' do
                             about_me: "I love travelling and going on adventures with my favorite side-kick -- my dog, Jack."
                           )
       allow_any_instance_of(ApplicationController).to receive(:current_user).and_return(user)
-      
+
       owner = Owner.create(name: 'owner')
       item1 = create(:random_item, owner: owner)
 
