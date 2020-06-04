@@ -11,17 +11,24 @@
 <h1 align=center>Here are your search results:</h1>
 
 <% if @results.length == 0 %>
-<p align=center>Sorry, no items match your search request</p>
+    <p align=center>Sorry, no items match your search request</p>
 <% else %>
-<% @results.each do |gear_item| %>
-  <div class="result">
-    <p class="name"><%=link_to "#{gear_item.name}", "/gear_items/#{gear_item.id}" %></p>
-    <p class="location">Located In: <%= gear_item.location.capitalize%></p>
-    <p class="photo"><%= gear_item.photo %>
-    <p class="price"><%= gear_item.price %>
-
-  </div>
-<% end %>
+<table class='search_results'>
+  <tr>
+    <th>Thumbnail</th>
+    <th>Description</th>
+  </tr>
+  <% @results.each do |gear_item| %>
+    <tr class='result'>
+      <td class="thumbnail"><%= image_tag gear_item.photo if gear_item.photo %></td>
+      <td>
+        <p class='name'><%=link_to "#{gear_item.name}", "/gear_items/#{gear_item.id}" %></p>
+        <p class='location'>Located In: <%= gear_item.location.capitalize%></p>
+        <p class='price'>Price Per Day: $<%= gear_item.price %></p>
+     </td>
+   </tr>
+  <% end %>
+</table>
 
 <p>
   <div id="map"></div>
