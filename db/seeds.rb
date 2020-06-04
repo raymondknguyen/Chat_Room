@@ -56,6 +56,15 @@ krista = User.create!( name: "Krista Stadler",
                      about_me: 'I love living in Colorado and spending time in the mountains!',
                      profile_picture: "https://img.theweek.in/content/dam/week/magazine/health/quickscan/images/2019/7/20/10-Nature-the-best-healer.jpg")
 
+ray = User.create!( name: "Ray Nguyen",
+                    email: "rayknguyen@gmail.com",
+                    about_me: 'I really like kayaks.',
+                    profile_picture: "https://encrypted-tbn0.gstatic.com/images?q=tbn%3AANd9GcTT2-7OfoTlXrNidMIPSs_REiM2qspSjOCc1bU_eDv5c1mVCcDT&usqp=CAU")
+
+ethan = User.create!( name: "Ethan Hocking",
+                     email: "eshocking253@gmail.com",
+                     about_me: 'Yay, outdoors!',
+                     profile_picture: "https://encrypted-tbn0.gstatic.com/images?q=tbn%3AANd9GcTAffuD--sYRlbD4-VvkejLqdNpKuqqHOUOPufN2J8L54mEro25&usqp=CAU")
 puts "Created Users"
 
 collin = Owner.create(name: 'Collin')
