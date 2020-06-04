@@ -10,7 +10,6 @@ class SearchController<ApplicationController
                                                              distance: location_params[:distance]}}).serialized_json
       get_matching_items(request)
       get_user_coordinates(request)
-
     else
       flash[:error] = "Sorry, no items match your search"
       redirect_back(fallback_location: "/")
