@@ -22,7 +22,7 @@ h4 {
 }
 
 body {
-  background-image: url('mountains.jpeg');
+  background-image: url('https://wallpaperaccess.com/full/1146666.jpg');
   background-size: cover;
   background-attachment: fixed;
   background-repeat: no-repeat;
@@ -41,17 +41,18 @@ body {
   z-index: -1;
 }
 
-.success {
-  background-color: #60E170
-}
-
-.success {
-  background-color: #60E170
-}
-
 div.expandable {
   position: relative;
   animation: 1s ease-out 0s 1 slideInFromTop;
+}
+
+.flash {
+  text-align: center;
+}
+
+.flash .message {
+  padding: 10px;
+  background-color: #60E170;
 }
 
 @keyframes slideInFromTop {
@@ -77,6 +78,7 @@ div.expandable {
   width: 33%;
 }
 
-
-
-
+.profile-picture {
+  max-width: 40%;
+  max-height: 40%;
+}
