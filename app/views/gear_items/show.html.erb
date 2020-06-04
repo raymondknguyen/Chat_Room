@@ -4,7 +4,7 @@
   <hr>
   <p><%= @item.description %></p>
   <p>Price: $<%= @item.price  %></p>
-  <p><%= @item.status %></p>
+  <p><%= @item.status.capitalize %></p>
 </div>
 
 <% if current_user %>

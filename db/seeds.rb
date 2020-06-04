@@ -70,12 +70,6 @@ snowboard3 = GearItem.create(name: 'Ride Berzerker Snowboard', description: Fake
 snowboard4 = GearItem.create(name: 'K2 Secret Weapon Snowboard', description: Faker::Lorem.paragraph, price: Faker::Commerce.price, condition: 0, status: 0, location: "120 Lower, Carriage Way, Snowmass Village, CO 81615", owner: collin, photo: "https://rqncr2pq51u34xp5y2t8cvy1-wpengine.netdna-ssl.com/wp-content/uploads/2019/10/K2-2020-Secret-Weapon-Mens-Snowboard.jpg")
 snowboard5 = GearItem.create(name: 'Burton Name Dropper Snowboard', description: Faker::Lorem.paragraph, price: Faker::Commerce.price, condition: 0, status: 0, location: "4580 Broadway, Boulder, CO 80304", owner: collin, photo: "https://rqncr2pq51u34xp5y2t8cvy1-wpengine.netdna-ssl.com/wp-content/uploads/2019/10/Burton-Name-Dropper-Snowboard.jpg")
 
-snowshoes1 = GearItem.create(name: 'MSR EVO 22 SNOWSHOE', description: Faker::Lorem.paragraph, price: Faker::Commerce.price, condition: 0, status: 0, location: "16539 Washington St, Thornton, CO 80023", owner: collin, photo: "https://2or2n61eranl2ilm943t35jn-wpengine.netdna-ssl.com/wp-content/uploads/2016/08/51zH9XXK6SL.SL160.jpg")
-snowshoes2 = GearItem.create(name: 'CHINOOK TREKKER SNOWSHOES', description: Faker::Lorem.paragraph, price: Faker::Commerce.price, condition: 0, status: 0, location: "1331 17th St, Denver, CO 80202", owner: collin, photo: "https://2or2n61eranl2ilm943t35jn-wpengine.netdna-ssl.com/wp-content/uploads/2016/08/51lM4UhMd8L.SL160.jpg")
-snowshoes3 = GearItem.create(name: 'REDFEATHER HIKE SNOWSHOE KIT', description: Faker::Lorem.paragraph, price: Faker::Commerce.price, condition: 0, status: 0, location: "2922 Baseline Rd, Boulder, CO 80303", owner: collin, photo: "https://2or2n61eranl2ilm943t35jn-wpengine.netdna-ssl.com/wp-content/uploads/2017/09/51t1QgN6LL.SL160.jpg")
-snowshoes4 = GearItem.create(name: 'Winterial Snowshoes', description: Faker::Lorem.paragraph, price: Faker::Commerce.price, condition: 0, status: 0, location: "250 Spader Way, Broomfield, CO 80020", owner: collin, photo: "https://2or2n61eranl2ilm943t35jn-wpengine.netdna-ssl.com/wp-content/uploads/2017/12/51bOvA7E6ZL.jpg")
-snowshoes5 = GearItem.create(name: 'Atlas Endeavor Snowshoes Review', description: Faker::Lorem.paragraph, price: Faker::Commerce.price, condition: 0, status: 0, location: "8500 Peña Blvd, Denver, CO 80249", owner: collin, photo: "https://2or2n61eranl2ilm943t35jn-wpengine.netdna-ssl.com/wp-content/uploads/2017/03/41P0Xu04HRL.jpg")
-
 bike1 = GearItem.create(name: 'Cannondale Bad Habit Bike', description: Faker::Lorem.paragraph, price: Faker::Commerce.price, condition: 0, status: 0, location: "16539 Washington St, Thornton, CO 80023", owner: collin, photo: "https://hips.hearstapps.com/hmg-prod.s3.amazonaws.com/images/1/cannondale-bad-habit-556-1520447534.jpg")
 bike2 = GearItem.create(name: 'Liv Lust Advanced 1 Bike', description: Faker::Lorem.paragraph, price: Faker::Commerce.price, condition: 0, status: 0, location: "1331 17th St, Denver, CO 80202", owner: collin, photo: "https://hips.hearstapps.com/hmg-prod.s3.amazonaws.com/images/1/lust-advanced-1-carbon-556-1520447534.jpg")
 bike3 = GearItem.create(name: 'Yeti SB130 TURQ X01 2019 Bike', description: Faker::Lorem.paragraph, price: Faker::Commerce.price, condition: 0, status: 0, location: "2922 Baseline Rd, Boulder, CO 80303", owner: collin, photo: "https://outdoorgearlab-mvnab3pwrvp3t0.stackpathdns.com/photos/22/86/350096_28004_S.jpg")
@@ -95,8 +89,8 @@ puts "Created Items"
 
 rental_1 = Rental.create!(start_date: "2020-05-01", end_date: "2020-05-15", user_id: margo.id, gear_item_id: tent.id, status: 'approved')
 rental_2 = Rental.create!(start_date: "2020-06-05", end_date: "2020-06-10", user_id: kate.id, gear_item_id: camper.id)
-rental_3 = Rental.create!(start_date: "2020-05-30", end_date: "2020-06-12", user_id: margo.id, gear_item_id: snowboard1.id, status: 'approved')
-rental_4 = Rental.create!(start_date: "2020-07-10", end_date: "2020-07-15", user_id: margo.id, gear_item_id: snowshoes2.id)
+rental_3 = Rental.create!(start_date: "2020-05-30", end_date: "2020-06-12", user_id: margo.id, gear_item_id: bike1.id, status: 'approved')
+rental_4 = Rental.create!(start_date: "2020-07-10", end_date: "2020-07-15", user_id: margo.id, gear_item_id: snowboard4.id)
 rental_5 = Rental.create!(start_date: "2020-07-10", end_date: "2020-07-15", user_id: margo.id, gear_item_id: helmet3.id, status: 'approved')
 
 puts "Created Rentals"
