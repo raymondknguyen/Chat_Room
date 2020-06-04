@@ -33,26 +33,26 @@
   <%end%>
 </section>
 
-
 <section class = "current_rentals">
   <% if current_user.current_rentals != [] %>
-
   <h3>Current Rentals</h3>
   <table>
     <tr>
+      <th>Thumbnail</th>
       <th>Name</th>
       <th>Starting</th>
       <th>Ending</th>
     </tr>
     <% current_user.current_rentals.each do |rental| %>
     <tr>
-      <td><p><%=link_to "#{rental.gear_item.name}", "/gear_items/#{rental.gear_item.id}" %></p></td>
+      <td class="thumbnail"><%= image_tag rental.gear_item.photo if rental.gear_item.photo %><td>
+      <td><p><%=link_to "#{rental.gear_item.name}", "/gear_items/#{rental.gear_item.id}" %> </p></td>
       <td><p><%= rental.start_date %> </p></td>
       <td><p><%= rental.end_date %> </p></td>
     </tr>
     <% end %>
   </table>
-  <%end %>
+  <%end%>
 </section>
 
 <section class = "upcoming_rentals">
@@ -60,19 +60,21 @@
   <h3>Upcoming Rentals</h3>
   <table>
     <tr>
+      <th>Thumbnail</th>
       <th>Name</th>
       <th>Starting</th>
       <th>Ending</th>
     </tr>
     <% current_user.upcoming_rentals.each do |rental| %>
     <tr>
+      <td class="thumbnail"><%= image_tag rental.gear_item.photo if rental.gear_item.photo %><td>
       <td><p><%=link_to "#{rental.gear_item.name}", "/gear_items/#{rental.gear_item.id}" %> </p></td>
       <td><p><%= rental.start_date %> </p></td>
       <td><p><%= rental.end_date %> </p></td>
     </tr>
     <% end %>
   </table>
-  <% end %>
+  <%end%>
 </section>
 
 <section class = "past_rentals">
@@ -80,17 +82,19 @@
   <h3>Past Rentals</h3>
   <table>
     <tr>
+      <th>Thumbnail</th>
       <th>Name</th>
       <th>Starting</th>
       <th>Ending</th>
     </tr>
     <% current_user.past_rentals.each do |rental| %>
     <tr>
+      <td class="thumbnail"><%= image_tag rental.gear_item.photo if rental.gear_item.photo %><td>
       <td><p><%=link_to "#{rental.gear_item.name}", "/gear_items/#{rental.gear_item.id}" %> </p></td>
       <td><p><%= rental.start_date %> </p></td>
       <td><p><%= rental.end_date %> </p></td>
     </tr>
     <% end %>
   </table>
-  <% end %>
+  <%end%>
 </section>
