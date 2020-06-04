@@ -17,6 +17,9 @@
   <div class="result">
     <p class="name"><%=link_to "#{gear_item.name}", "/gear_items/#{gear_item.id}" %></p>
     <p class="location">Located In: <%= gear_item.location.capitalize%></p>
+    <p class="photo"><%= gear_item.photo %>
+    <p class="price"><%= gear_item.price %>
+
   </div>
 <% end %>
 
