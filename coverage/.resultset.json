@@ -1,7 +1,7 @@
 {
   "RSpec": {
     "coverage": {
-      "/Users/kristastadler/turing/3module/projects/GearShare/config/environment.rb": {
+      "/Users/thunderwolf/turing/mod3-2/projects/group/GearShare/config/environment.rb": {
         "lines": [
           null,
           1,
@@ -10,7 +10,7 @@
           1
         ]
       },
-      "/Users/kristastadler/turing/3module/projects/GearShare/config/application.rb": {
+      "/Users/thunderwolf/turing/mod3-2/projects/group/GearShare/config/application.rb": {
         "lines": [
           1,
           null,
@@ -50,7 +50,7 @@
           null
         ]
       },
-      "/Users/kristastadler/turing/3module/projects/GearShare/config/boot.rb": {
+      "/Users/thunderwolf/turing/mod3-2/projects/group/GearShare/config/boot.rb": {
         "lines": [
           1,
           null,
@@ -58,7 +58,7 @@
           1
         ]
       },
-      "/Users/kristastadler/turing/3module/projects/GearShare/config/environments/test.rb": {
+      "/Users/thunderwolf/turing/mod3-2/projects/group/GearShare/config/environments/test.rb": {
         "lines": [
           1,
           null,
@@ -108,7 +108,7 @@
           null
         ]
       },
-      "/Users/kristastadler/turing/3module/projects/GearShare/config/initializers/application_controller_renderer.rb": {
+      "/Users/thunderwolf/turing/mod3-2/projects/group/GearShare/config/initializers/application_controller_renderer.rb": {
         "lines": [
           null,
           null,
@@ -120,7 +120,7 @@
           null
         ]
       },
-      "/Users/kristastadler/turing/3module/projects/GearShare/config/initializers/assets.rb": {
+      "/Users/thunderwolf/turing/mod3-2/projects/group/GearShare/config/initializers/assets.rb": {
         "lines": [
           null,
           null,
@@ -138,7 +138,7 @@
           null
         ]
       },
-      "/Users/kristastadler/turing/3module/projects/GearShare/config/initializers/backtrace_silencers.rb": {
+      "/Users/thunderwolf/turing/mod3-2/projects/group/GearShare/config/initializers/backtrace_silencers.rb": {
         "lines": [
           null,
           null,
@@ -149,7 +149,7 @@
           null
         ]
       },
-      "/Users/kristastadler/turing/3module/projects/GearShare/config/initializers/content_security_policy.rb": {
+      "/Users/thunderwolf/turing/mod3-2/projects/group/GearShare/config/initializers/content_security_policy.rb": {
         "lines": [
           null,
           null,
@@ -178,7 +178,7 @@
           null
         ]
       },
-      "/Users/kristastadler/turing/3module/projects/GearShare/config/initializers/cookies_serializer.rb": {
+      "/Users/thunderwolf/turing/mod3-2/projects/group/GearShare/config/initializers/cookies_serializer.rb": {
         "lines": [
           null,
           null,
@@ -187,7 +187,7 @@
           1
         ]
       },
-      "/Users/kristastadler/turing/3module/projects/GearShare/config/initializers/filter_parameter_logging.rb": {
+      "/Users/thunderwolf/turing/mod3-2/projects/group/GearShare/config/initializers/filter_parameter_logging.rb": {
         "lines": [
           null,
           null,
@@ -195,7 +195,7 @@
           1
         ]
       },
-      "/Users/kristastadler/turing/3module/projects/GearShare/config/initializers/inflections.rb": {
+      "/Users/thunderwolf/turing/mod3-2/projects/group/GearShare/config/initializers/inflections.rb": {
         "lines": [
           null,
           null,
@@ -215,7 +215,7 @@
           null
         ]
       },
-      "/Users/kristastadler/turing/3module/projects/GearShare/config/initializers/mime_types.rb": {
+      "/Users/thunderwolf/turing/mod3-2/projects/group/GearShare/config/initializers/mime_types.rb": {
         "lines": [
           null,
           null,
@@ -223,14 +223,14 @@
           null
         ]
       },
-      "/Users/kristastadler/turing/3module/projects/GearShare/config/initializers/onmiauth.rb": {
+      "/Users/thunderwolf/turing/mod3-2/projects/group/GearShare/config/initializers/onmiauth.rb": {
         "lines": [
           1,
           1,
           null
         ]
       },
-      "/Users/kristastadler/turing/3module/projects/GearShare/config/initializers/wrap_parameters.rb": {
+      "/Users/thunderwolf/turing/mod3-2/projects/group/GearShare/config/initializers/wrap_parameters.rb": {
         "lines": [
           null,
           null,
@@ -248,7 +248,7 @@
           null
         ]
       },
-      "/Users/kristastadler/turing/3module/projects/GearShare/spec/factories/gear_item.rb": {
+      "/Users/thunderwolf/turing/mod3-2/projects/group/GearShare/spec/factories/gear_item.rb": {
         "lines": [
           1,
           1,
@@ -264,7 +264,7 @@
           null
         ]
       },
-      "/Users/kristastadler/turing/3module/projects/GearShare/app/models/gear_item.rb": {
+      "/Users/thunderwolf/turing/mod3-2/projects/group/GearShare/app/models/gear_item.rb": {
         "lines": [
           1,
           1,
@@ -287,14 +287,14 @@
           null
         ]
       },
-      "/Users/kristastadler/turing/3module/projects/GearShare/app/models/application_record.rb": {
+      "/Users/thunderwolf/turing/mod3-2/projects/group/GearShare/app/models/application_record.rb": {
         "lines": [
           1,
           1,
           null
         ]
       },
-      "/Users/kristastadler/turing/3module/projects/GearShare/spec/factories/messages.rb": {
+      "/Users/thunderwolf/turing/mod3-2/projects/group/GearShare/spec/factories/messages.rb": {
         "lines": [
           1,
           1,
@@ -305,7 +305,7 @@
           null
         ]
       },
-      "/Users/kristastadler/turing/3module/projects/GearShare/spec/factories/rooms.rb": {
+      "/Users/thunderwolf/turing/mod3-2/projects/group/GearShare/spec/factories/rooms.rb": {
         "lines": [
           1,
           1,
@@ -314,21 +314,21 @@
           null
         ]
       },
-      "/Users/kristastadler/turing/3module/projects/GearShare/spec/factories/user.rb": {
+      "/Users/thunderwolf/turing/mod3-2/projects/group/GearShare/spec/factories/user.rb": {
         "lines": [
           1,
           1,
-          1,
-          1,
-          1,
-          1,
-          1,
-          1,
+          2,
+          2,
+          2,
+          2,
+          2,
+          2,
           null,
           null
         ]
       },
-      "/Users/kristastadler/turing/3module/projects/GearShare/app/models/user.rb": {
+      "/Users/thunderwolf/turing/mod3-2/projects/group/GearShare/app/models/user.rb": {
         "lines": [
           1,
           1,
@@ -370,7 +370,7 @@
           null
         ]
       },
-      "/Users/kristastadler/turing/3module/projects/GearShare/config/routes.rb": {
+      "/Users/thunderwolf/turing/mod3-2/projects/group/GearShare/config/routes.rb": {
         "lines": [
           1,
           1,
@@ -401,79 +401,111 @@
           null
         ]
       },
-      "/Users/kristastadler/turing/3module/projects/GearShare/app/helpers/application_helper.rb": {
+      "/Users/thunderwolf/turing/mod3-2/projects/group/GearShare/app/helpers/application_helper.rb": {
         "lines": [
           1,
           null
         ]
       },
-      "/Users/kristastadler/turing/3module/projects/GearShare/app/helpers/messages_helper.rb": {
+      "/Users/thunderwolf/turing/mod3-2/projects/group/GearShare/app/helpers/messages_helper.rb": {
         "lines": [
           1,
           null
         ]
       },
-      "/Users/kristastadler/turing/3module/projects/GearShare/app/helpers/rooms_helper.rb": {
+      "/Users/thunderwolf/turing/mod3-2/projects/group/GearShare/app/helpers/rooms_helper.rb": {
         "lines": [
           1,
           null
         ]
       },
-      "/Users/kristastadler/turing/3module/projects/GearShare/spec/features/partials/_navbar.html.erb_spec.rb": {
-        "lines": [
-          1,
-          null,
-          1,
-          1,
-          2,
-          null,
-          null,
-          null,
-          null,
-          null,
-          null,
-          null,
-          null,
-          null,
-          null,
-          null,
-          null,
-          1,
-          1,
-          1,
-          null,
-          null,
-          1,
-          1,
-          null,
-          1,
-          1,
-          null,
-          null,
-          null,
-          1,
-          1,
-          1,
-          null,
-          null,
-          1,
-          1,
-          null,
-          1,
-          1,
-          1,
-          null,
-          null,
-          null
-        ]
-      },
-      "/Users/kristastadler/turing/3module/projects/GearShare/spec/features/users/user_can_add_info_to_profile_spec.rb": {
+      "/Users/thunderwolf/turing/mod3-2/projects/group/GearShare/spec/features/messaging/user_can_message_spec.rb": {
         "lines": [
           1,
           null,
           1,
           1,
           1,
+          1,
+          1,
+          null,
+          1,
+          null,
+          1,
+          1,
+          null,
+          1,
+          null,
+          1,
+          1,
+          null,
+          null,
+          1,
+          1,
+          null,
+          1,
+          null,
+          1,
+          null,
+          null,
+          null
+        ]
+      },
+      "/Users/thunderwolf/turing/mod3-2/projects/group/GearShare/spec/features/partials/_navbar.html.erb_spec.rb": {
+        "lines": [
+          1,
+          null,
+          1,
+          1,
+          2,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          1,
+          1,
+          1,
+          null,
+          null,
+          1,
+          1,
+          null,
+          1,
+          1,
+          null,
+          null,
+          null,
+          1,
+          1,
+          1,
+          null,
+          null,
+          1,
+          1,
+          null,
+          1,
+          1,
+          1,
+          null,
+          null,
+          null
+        ]
+      },
+      "/Users/thunderwolf/turing/mod3-2/projects/group/GearShare/spec/features/users/user_can_add_info_to_profile_spec.rb": {
+        "lines": [
+          1,
+          null,
+          1,
+          1,
+          1,
           null,
           null,
           null,
@@ -500,7 +532,7 @@
           null
         ]
       },
-      "/Users/kristastadler/turing/3module/projects/GearShare/spec/features/users/user_can_logout_spec.rb": {
+      "/Users/thunderwolf/turing/mod3-2/projects/group/GearShare/spec/features/users/user_can_logout_spec.rb": {
         "lines": [
           1,
           null,
@@ -526,7 +558,7 @@
           null
         ]
       },
-      "/Users/kristastadler/turing/3module/projects/GearShare/spec/features/users/user_can_request_to_rent_gear_spec.rb": {
+      "/Users/thunderwolf/turing/mod3-2/projects/group/GearShare/spec/features/users/user_can_request_to_rent_gear_spec.rb": {
         "lines": [
           1,
           null,
@@ -615,7 +647,7 @@
           null
         ]
       },
-      "/Users/kristastadler/turing/3module/projects/GearShare/spec/features/users/user_can_search_for_gear_spec.rb": {
+      "/Users/thunderwolf/turing/mod3-2/projects/group/GearShare/spec/features/users/user_can_search_for_gear_spec.rb": {
         "lines": [
           1,
           null,
@@ -710,7 +742,7 @@
           null
         ]
       },
-      "/Users/kristastadler/turing/3module/projects/GearShare/spec/features/users/user_profile_spec.rb": {
+      "/Users/thunderwolf/turing/mod3-2/projects/group/GearShare/spec/features/users/user_profile_spec.rb": {
         "lines": [
           1,
           null,
@@ -783,7 +815,7 @@
           null
         ]
       },
-      "/Users/kristastadler/turing/3module/projects/GearShare/spec/jobs/message_broadcast_job_spec.rb": {
+      "/Users/thunderwolf/turing/mod3-2/projects/group/GearShare/spec/jobs/message_broadcast_job_spec.rb": {
         "lines": [
           1,
           null,
@@ -792,7 +824,7 @@
           null
         ]
       },
-      "/Users/kristastadler/turing/3module/projects/GearShare/app/jobs/message_broadcast_job.rb": {
+      "/Users/thunderwolf/turing/mod3-2/projects/group/GearShare/app/jobs/message_broadcast_job.rb": {
         "lines": [
           1,
           1,
@@ -812,98 +844,13 @@
           null
         ]
       },
-      "/Users/kristastadler/turing/3module/projects/GearShare/app/jobs/application_job.rb": {
+      "/Users/thunderwolf/turing/mod3-2/projects/group/GearShare/app/jobs/application_job.rb": {
         "lines": [
           1,
           null
         ]
       },
-      "/Users/kristastadler/turing/3module/projects/GearShare/spec/models/gear_item_spec.rb": {
-        "lines": [
-          1,
-          null,
-          1,
-          null,
-          1,
-          2,
-          2,
-          2,
-          2,
-          2,
-          2,
-          null,
-          null,
-          null,
-          1,
-          2,
-          2,
-          2,
-          null,
-          null,
-          1,
-          1,
-          1,
-          1,
-          null,
-          1,
-          1,
-          1,
-          1,
-          1,
-          null,
-          1,
-          1,
-          1,
-          null,
-          1,
-          null,
-          null,
-          null
-        ]
-      },
-      "/Users/kristastadler/turing/3module/projects/GearShare/spec/models/message_spec.rb": {
-        "lines": [
-          1,
-          null,
-          1,
-          null,
-          null
-        ]
-      },
-      "/Users/kristastadler/turing/3module/projects/GearShare/app/models/message.rb": {
-        "lines": [
-          1,
-          1,
-          1,
-          null
-        ]
-      },
-      "/Users/kristastadler/turing/3module/projects/GearShare/spec/models/owner_spec.rb": {
-        "lines": [
-          1,
-          null,
-          1,
-          null,
-          1,
-          2,
-          null,
-          null,
-          1,
-          2,
-          null,
-          null,
-          null
-        ]
-      },
-      "/Users/kristastadler/turing/3module/projects/GearShare/app/models/owner.rb": {
-        "lines": [
-          1,
-          1,
-          1,
-          null
-        ]
-      },
-      "/Users/kristastadler/turing/3module/projects/GearShare/spec/models/rental_spec.rb": {
+      "/Users/thunderwolf/turing/mod3-2/projects/group/GearShare/spec/models/gear_item_spec.rb": {
         "lines": [
           1,
           null,
@@ -912,6 +859,91 @@
           1,
           2,
           2,
+          2,
+          2,
+          2,
+          2,
+          null,
+          null,
+          null,
+          1,
+          2,
+          2,
+          2,
+          null,
+          null,
+          1,
+          1,
+          1,
+          1,
+          null,
+          1,
+          1,
+          1,
+          1,
+          1,
+          null,
+          1,
+          1,
+          1,
+          null,
+          1,
+          null,
+          null,
+          null
+        ]
+      },
+      "/Users/thunderwolf/turing/mod3-2/projects/group/GearShare/spec/models/message_spec.rb": {
+        "lines": [
+          1,
+          null,
+          1,
+          null,
+          null
+        ]
+      },
+      "/Users/thunderwolf/turing/mod3-2/projects/group/GearShare/app/models/message.rb": {
+        "lines": [
+          1,
+          1,
+          1,
+          null
+        ]
+      },
+      "/Users/thunderwolf/turing/mod3-2/projects/group/GearShare/spec/models/owner_spec.rb": {
+        "lines": [
+          1,
+          null,
+          1,
+          null,
+          1,
+          2,
+          null,
+          null,
+          1,
+          2,
+          null,
+          null,
+          null
+        ]
+      },
+      "/Users/thunderwolf/turing/mod3-2/projects/group/GearShare/app/models/owner.rb": {
+        "lines": [
+          1,
+          1,
+          1,
+          null
+        ]
+      },
+      "/Users/thunderwolf/turing/mod3-2/projects/group/GearShare/spec/models/rental_spec.rb": {
+        "lines": [
+          1,
+          null,
+          1,
+          null,
+          1,
+          2,
+          2,
           null,
           null,
           1,
@@ -922,7 +954,7 @@
           null
         ]
       },
-      "/Users/kristastadler/turing/3module/projects/GearShare/app/models/rental.rb": {
+      "/Users/thunderwolf/turing/mod3-2/projects/group/GearShare/app/models/rental.rb": {
         "lines": [
           1,
           1,
@@ -933,7 +965,7 @@
           null
         ]
       },
-      "/Users/kristastadler/turing/3module/projects/GearShare/spec/models/room_spec.rb": {
+      "/Users/thunderwolf/turing/mod3-2/projects/group/GearShare/spec/models/room_spec.rb": {
         "lines": [
           1,
           null,
@@ -942,7 +974,7 @@
           null
         ]
       },
-      "/Users/kristastadler/turing/3module/projects/GearShare/app/models/room.rb": {
+      "/Users/thunderwolf/turing/mod3-2/projects/group/GearShare/app/models/room.rb": {
         "lines": [
           1,
           1,
@@ -950,7 +982,7 @@
           null
         ]
       },
-      "/Users/kristastadler/turing/3module/projects/GearShare/spec/models/user_spec.rb": {
+      "/Users/thunderwolf/turing/mod3-2/projects/group/GearShare/spec/models/user_spec.rb": {
         "lines": [
           1,
           null,
@@ -1028,7 +1060,7 @@
           null
         ]
       },
-      "/Users/kristastadler/turing/3module/projects/GearShare/spec/routing/messages_routing_spec.rb": {
+      "/Users/thunderwolf/turing/mod3-2/projects/group/GearShare/spec/routing/messages_routing_spec.rb": {
         "lines": [
           1,
           null,
@@ -1070,7 +1102,7 @@
           null
         ]
       },
-      "/Users/kristastadler/turing/3module/projects/GearShare/app/controllers/messages_controller.rb": {
+      "/Users/thunderwolf/turing/mod3-2/projects/group/GearShare/app/controllers/messages_controller.rb": {
         "lines": [
           1,
           1,
@@ -1102,20 +1134,6 @@
           0,
           0,
           0,
-          null,
-          null,
-          null,
-          null,
-          1,
-          0,
-          0,
-          0,
-          0,
-          null,
-          0,
-          0,
-          null,
-          null,
           null,
           null,
           null,
@@ -1141,7 +1159,7 @@
           null
         ]
       },
-      "/Users/kristastadler/turing/3module/projects/GearShare/app/controllers/application_controller.rb": {
+      "/Users/thunderwolf/turing/mod3-2/projects/group/GearShare/app/controllers/application_controller.rb": {
         "lines": [
           1,
           1,
@@ -1152,7 +1170,7 @@
           null
         ]
       },
-      "/Users/kristastadler/turing/3module/projects/GearShare/spec/routing/rooms_routing_spec.rb": {
+      "/Users/thunderwolf/turing/mod3-2/projects/group/GearShare/spec/routing/rooms_routing_spec.rb": {
         "lines": [
           1,
           null,
@@ -1194,7 +1212,7 @@
           null
         ]
       },
-      "/Users/kristastadler/turing/3module/projects/GearShare/app/controllers/rooms_controller.rb": {
+      "/Users/thunderwolf/turing/mod3-2/projects/group/GearShare/app/controllers/rooms_controller.rb": {
         "lines": [
           1,
           1,
@@ -1202,49 +1220,35 @@
           null,
           null,
           1,
-          0,
-          0,
+          2,
+          2,
           null,
           null,
           null,
           null,
           1,
-          0,
-          0,
-          null,
-          null,
-          null,
           1,
-          0,
-          null,
-          null,
-          null,
           1,
-          null,
           null,
           null,
           null,
           1,
           0,
           null,
-          0,
-          0,
-          0,
-          0,
-          null,
-          0,
-          0,
           null,
           null,
+          1,
           null,
           null,
           null,
           null,
           1,
-          0,
-          0,
-          0,
-          0,
+          1,
+          null,
+          1,
+          1,
+          2,
+          1,
           null,
           0,
           0,
@@ -1255,27 +1259,27 @@
           null,
           null,
           1,
-          0,
-          0,
-          0,
-          0,
+          1,
+          1,
+          2,
+          1,
           null,
           null,
           null,
           1,
           null,
           1,
-          0,
+          2,
           null,
           null,
           null,
           1,
-          0,
+          1,
           null,
           null
         ]
       },
-      "/Users/kristastadler/turing/3module/projects/GearShare/spec/views/rooms/edit.html.erb_spec.rb": {
+      "/Users/thunderwolf/turing/mod3-2/projects/group/GearShare/spec/views/rooms/edit.html.erb_spec.rb": {
         "lines": [
           1,
           null,
@@ -1297,7 +1301,7 @@
           null
         ]
       },
-      "/Users/kristastadler/turing/3module/projects/GearShare/spec/views/rooms/new.html.erb_spec.rb": {
+      "/Users/thunderwolf/turing/mod3-2/projects/group/GearShare/spec/views/rooms/new.html.erb_spec.rb": {
         "lines": [
           1,
           null,
@@ -1319,7 +1323,7 @@
           null
         ]
       },
-      "/Users/kristastadler/turing/3module/projects/GearShare/spec/views/rooms/show.html.erb_spec.rb": {
+      "/Users/thunderwolf/turing/mod3-2/projects/group/GearShare/spec/views/rooms/show.html.erb_spec.rb": {
         "lines": [
           1,
           null,
@@ -1337,7 +1341,7 @@
           null
         ]
       },
-      "/Users/kristastadler/turing/3module/projects/GearShare/app/controllers/gear_items_controller.rb": {
+      "/Users/thunderwolf/turing/mod3-2/projects/group/GearShare/app/controllers/gear_items_controller.rb": {
         "lines": [
           1,
           1,
@@ -1346,7 +1350,7 @@
           null
         ]
       },
-      "/Users/kristastadler/turing/3module/projects/GearShare/app/controllers/search_controller.rb": {
+      "/Users/thunderwolf/turing/mod3-2/projects/group/GearShare/app/controllers/search_controller.rb": {
         "lines": [
           1,
           null,
@@ -1394,7 +1398,7 @@
           null
         ]
       },
-      "/Users/kristastadler/turing/3module/projects/GearShare/app/controllers/users_controller.rb": {
+      "/Users/thunderwolf/turing/mod3-2/projects/group/GearShare/app/controllers/users_controller.rb": {
         "lines": [
           1,
           null,
@@ -1416,7 +1420,7 @@
           null
         ]
       },
-      "/Users/kristastadler/turing/3module/projects/GearShare/app/controllers/sessions_controller.rb": {
+      "/Users/thunderwolf/turing/mod3-2/projects/group/GearShare/app/controllers/sessions_controller.rb": {
         "lines": [
           1,
           null,
@@ -1440,7 +1444,7 @@
           null
         ]
       },
-      "/Users/kristastadler/turing/3module/projects/GearShare/app/controllers/rental_controller.rb": {
+      "/Users/thunderwolf/turing/mod3-2/projects/group/GearShare/app/controllers/rental_controller.rb": {
         "lines": [
           1,
           null,
@@ -1474,7 +1478,7 @@
           null
         ]
       },
-      "/Users/kristastadler/turing/3module/projects/GearShare/app/serializers/gear_item_serializer.rb": {
+      "/Users/thunderwolf/turing/mod3-2/projects/group/GearShare/app/serializers/gear_item_serializer.rb": {
         "lines": [
           1,
           1,
@@ -1492,7 +1496,7 @@
           null
         ]
       },
-      "/Users/kristastadler/turing/3module/projects/GearShare/app/services/gear_hub_service.rb": {
+      "/Users/thunderwolf/turing/mod3-2/projects/group/GearShare/app/services/gear_hub_service.rb": {
         "lines": [
           1,
           null,
@@ -1510,7 +1514,7 @@
           null
         ]
       },
-      "/Users/kristastadler/turing/3module/projects/GearShare/app/models/matching_item.rb": {
+      "/Users/thunderwolf/turing/mod3-2/projects/group/GearShare/app/models/matching_item.rb": {
         "lines": [
           1,
           1,
@@ -1538,6 +1542,6 @@
         ]
       }
     },
-    "timestamp": 1591318897
+    "timestamp": 1591371910
   }
 }
