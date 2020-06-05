@@ -52,6 +52,7 @@ group :development, :test do
   gem 'factory_bot_rails'
   gem 'launchy'
   gem 'figaro'
+  gem 'simplecov'
 end
 
 group :development do
