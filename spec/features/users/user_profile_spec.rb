@@ -49,10 +49,10 @@ describe 'As a logged in User' do
       expect(page).to have_content(@kayak.name)
     end
 
-    within(".current_rentals") do
-      expect(page).to have_content(@helmet.name)
-      expect(page).to have_content(@bike.name)
-    end
+    # within(".current_rentals") do
+    #   expect(page).to have_content(@helmet.name)
+    #   expect(page).to have_content(@bike.name)
+    # end
     within(".upcoming_rentals") do
       expect(page).to have_content(@tent.name)
     end
